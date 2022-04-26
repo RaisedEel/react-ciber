@@ -11,7 +11,7 @@
 
 .image{
   width: 30%; 
-  background-image: url(../../assets/head.jpg);
+  background-image: url(../../../public/assets/head.jpg);
   background-size: cover; 
   background-position: right; 
   background-repeat: no-repeat;

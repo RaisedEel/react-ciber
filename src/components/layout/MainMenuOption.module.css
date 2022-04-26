@@ -1,0 +1,23 @@
+.opt-menu{
+  height: 26%;
+  border: none;
+}
+
+.opt-menu:hover{
+  background-color: #660708;
+}
+
+.opt-menu a {
+  text-decoration: none;
+}
+
+.opt-menu img{
+  max-width: 75%;
+  max-height: 75%;
+  display: block;
+  margin: 0% auto;
+}
+
+.opt-menu h5{
+  text-align: center;
+}
