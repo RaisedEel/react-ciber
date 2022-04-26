@@ -1,0 +1,13 @@
+.layout{
+  height: 100%; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between;
+}
+
+.content{
+  height: 80%; 
+  display: flex; 
+  justify-content: space-between; 
+  overflow: auto;
+}
