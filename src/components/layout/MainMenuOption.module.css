@@ -1,9 +1,10 @@
-.opt-menu{
-  height: 26%;
+.opt-menu {
+  height: 30%;
   border: none;
+  cursor: pointer;
 }
 
-.opt-menu:hover{
+.opt-menu:hover {
   background-color: #660708;
 }
 
@@ -11,13 +12,13 @@
   text-decoration: none;
 }
 
-.opt-menu img{
+.opt-menu img {
   max-width: 75%;
   max-height: 75%;
   display: block;
   margin: 0% auto;
 }
 
-.opt-menu h5{
+.opt-menu h5 {
   text-align: center;
 }

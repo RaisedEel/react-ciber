@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import classes from './MainMenuOption.module.css'
+import classes from './MainMenuOption.module.css';
 
 function MainMenuOption(props) {
   return (
