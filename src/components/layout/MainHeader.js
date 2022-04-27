@@ -4,7 +4,7 @@ function MainHeader() {
   return (
     <header className={classes.header}>
       <div className={classes.title}>
-        MANEJA TU CIBER!
+        MANEJA TU CIBER CON REACT!
       </div>
       <div className={classes.image} />
     </header>

@@ -13,19 +13,19 @@ function MainMenu(props) {
         </h4>
       )}
       <MainMenuOption
-        title='CLIENTES'
-        path='/clientes'
-        imagePath='/assets/clientes.png'
-      />
-      <MainMenuOption
-        title='RENTAS'
-        path='/rentas'
-        imagePath='/assets/rentas.png'
+        title='PANEL'
+        path='/panel'
+        imagePath='/assets/panel.png'
       />
       <MainMenuOption
         title='EQUIPOS'
         path='/computadoras'
         imagePath='/assets/computadoras.png'
+      />
+      <MainMenuOption
+        title='RENTAS'
+        path='/rentas'
+        imagePath='/assets/rentas.png'
       />
     </nav>
   );

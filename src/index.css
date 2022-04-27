@@ -2,7 +2,6 @@
   margin: 0%;
   padding: 0%;
   font-family: 'Lato', sans-serif;
-  color: #d3d3d3;
 }
 
 html {
@@ -13,11 +12,12 @@ html {
 }
 
 body {
-  background-color: #343a40 !important;
+  color: whitesmoke;
+  background-color: dimgray !important;
 }
 
 a {
-  color: #d3d3d3 !important;
+  color: whitesmoke !important;
 }
 
 a:hover {

@@ -17,7 +17,7 @@ function Layout(props) {
       <div className={classes.content}>
         <div className={classes['ctn-btn']}>
           <button className={classes['btn-menu']} onClick={controlMenuHandler}>
-            &#11166;
+            <p className={hideMenu ? '' : classes.rotate}>&#11166;</p>
           </button>
         </div>
         {!hideMenu && <MainMenu />}
