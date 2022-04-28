@@ -1,0 +1,80 @@
+.device {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+  margin: 8px;
+}
+
+.device h4 {
+  margin-bottom: 2vh;
+}
+
+.badge {
+  margin: 5px;
+  padding: 5px;
+  background-color: lightgray;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.badge img {
+  height: 100px;
+}
+
+.badge p {
+  color: #ba181b;
+  font-weight: 700;
+  text-align: center;
+}
+
+.content {
+  flex: 1;
+  margin: 5px;
+}
+
+.input {
+  display: flex;
+}
+
+.input span {
+  flex: 1;
+  border: 1px solid gray;
+  text-align: right;
+  border-radius: 5px;
+}
+
+.input-actions button {
+  width: 30px;
+  height: 100%;
+  margin-left: 5px;
+  font-weight: 700;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.actions button {
+  height: 40px;
+  margin: 5px;
+  padding: 5px 25px;
+}
+
+button.red-button {
+  background-color: #ba181b;
+}
+
+.rent-info {
+  text-align: center;
+}
+
+.timer {
+  color: green;
+  font-size: 1.8rem;
+  font-weight: 700;
+  width: 100%;
+}

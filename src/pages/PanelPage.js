@@ -1,5 +1,14 @@
+import DeviceList from '../components/devices/DevicesList';
+import MainContentWrapper from '../components/wrappers/MainWrapper';
+
+const DUMMY_DEVICES = [{name: 'DEVICE 1'}, {name: 'DEVICE 2'}, {name: 'DEVICE 3'}]
+
 function PanelPage() {
-  return <div>PANEL DE CONTROL</div>;
+  return (
+    <MainContentWrapper title='PANEL DE CONTROL'>
+      <DeviceList devices = {DUMMY_DEVICES} />
+    </MainContentWrapper>
+  );
 }
 
 export default PanelPage;

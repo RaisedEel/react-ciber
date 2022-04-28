@@ -21,5 +21,16 @@ a {
 }
 
 a:hover {
-  color: #339cff !important;
+  color: #187bcd !important;
+}
+
+button {
+  color: whitesmoke;
+  background-color: #187bcd;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  filter: brightness(85%);
 }

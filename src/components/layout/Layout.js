@@ -21,7 +21,9 @@ function Layout(props) {
           </button>
         </div>
         {!hideMenu && <MainMenu />}
-        <main className={classes.main}>{props.children}</main>
+        <main className={classes.main}>
+          {props.children}
+        </main>
       </div>
     </div>
   );
