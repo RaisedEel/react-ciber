@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import device from '../../assets/device.png'
 import classes from './DeviceItem.module.css';
 
 function DeviceItem(props) {
@@ -21,7 +22,7 @@ function DeviceItem(props) {
   return (
     <div className={classes.device}>
       <div className={classes.badge}>
-        <img src='assets/device.png' alt={props.name} />
+        <img src={device} alt={props.name} />
         <p>EN USO</p>
       </div>
       <div className={classes.content}>

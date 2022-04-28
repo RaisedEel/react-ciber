@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 
+import panel from '../../assets/panel.png';
+import computadoras from '../../assets/computadoras.png';
+import rentas from '../../assets/rentas.png'
 import MainMenuOption from './MainMenuOption';
 import classes from './MainMenu.module.css';
 
@@ -15,17 +18,17 @@ function MainMenu(props) {
       <MainMenuOption
         title='PANEL'
         path='/panel'
-        imagePath='/assets/panel.png'
+        imagePath={panel}
       />
       <MainMenuOption
         title='EQUIPOS'
         path='/computadoras'
-        imagePath='/assets/computadoras.png'
+        imagePath={computadoras}
       />
       <MainMenuOption
         title='RENTAS'
         path='/rentas'
-        imagePath='/assets/rentas.png'
+        imagePath={rentas}
       />
     </nav>
   );
