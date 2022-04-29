@@ -1,0 +1,21 @@
+.list {
+  list-style: none;
+}
+
+.header {
+  width: 90%;
+  margin: 9px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header .name {
+  width: 30%;
+  text-align: center;
+}
+
+.header span {
+  width: 12%;
+  padding-left: 2px;
+  text-align: center;
+}

@@ -1,17 +1,17 @@
 import Card from '../wrappers/Card';
 import classes from './RentalItem.module.css';
 
-function RentalItem() {
+function RentalItem(props) {
   return (
     <li>
       <Card className={classes.rental}>
-        <p className={classes.name}>DEVICE NUMBER X</p>
+        <p className={classes.name}>{props.name}</p>
         <div className={classes.data}>
-          <p>13:10</p>
-          <p>15:10</p>
-          <p>2.00 Hrs</p>
-          <p>$10.00</p>
-          <p>$ 20.00</p>
+          <p>{props.startTime}</p>
+          <p>{props.endTime}</p>
+          <p>{props.duration} Hrs</p>
+          <p>$ {props.price}</p>
+          <p className={classes.result}>$ {props.total}</p>
         </div>
         <div className={classes.actions}>
           <button className='red-button'>&#128465;</button>
