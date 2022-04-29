@@ -3,9 +3,6 @@
   display: flex;
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
-  margin: 8px;
 }
 
 .device h4 {
@@ -62,10 +59,6 @@
   height: 40px;
   margin: 5px;
   padding: 5px 25px;
-}
-
-button.red-button {
-  background-color: #ba181b;
 }
 
 .rent-info {

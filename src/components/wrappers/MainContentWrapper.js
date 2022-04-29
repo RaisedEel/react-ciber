@@ -1,4 +1,4 @@
-import classes from './MainWrapper.module.css';
+import classes from './MainContentWrapper.module.css';
 
 function MainContentWrapper(props) {
   return (

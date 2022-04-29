@@ -1,5 +1,5 @@
 import DeviceItem from './DeviceItem';
-import classes from './DeviceList.module.css';
+import classes from './DevicesList.module.css';
 
 function DeviceList(props) {
   return (

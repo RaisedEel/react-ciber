@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
-import device from '../../assets/device.png'
+import Card from '../wrappers/Card';
+import device from '../../assets/device.png';
 import classes from './DeviceItem.module.css';
 
 function DeviceItem(props) {
@@ -20,7 +21,7 @@ function DeviceItem(props) {
   };
 
   return (
-    <div className={classes.device}>
+    <Card className={classes.device}>
       <div className={classes.badge}>
         <img src={device} alt={props.name} />
         <p>EN USO</p>
@@ -37,16 +38,16 @@ function DeviceItem(props) {
         </div>
 
         <div className={classes.actions}>
-          <button>Detener Tiempo</button>{' '}
-          <button className={classes['red-button']}>Cancelar</button>
+          <button>Detener Tiempo</button>
+          <button className='red-button'>Cancelar</button>
         </div>
         <hr />
         <div className={classes['rent-info']}>
-          <p>Hora Inicial: 3:30 PM</p>
+          <strong>Hora Inicial: 3:30 PM</strong>
           <p className={classes.timer}>1:50 Hrs.</p>
         </div>
       </div>
-    </div>
+    </Card>
   );
 }
 

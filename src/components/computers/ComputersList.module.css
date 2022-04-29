@@ -1,0 +1,9 @@
+.list {
+  list-style: none;
+}
+
+.button {
+  margin-left: 8px;
+  padding: 1% 2%;
+  font-weight: 700;
+}

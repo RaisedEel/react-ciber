@@ -1,5 +1,5 @@
 import DeviceList from '../components/devices/DevicesList';
-import MainContentWrapper from '../components/wrappers/MainWrapper';
+import MainContentWrapper from '../components/wrappers/MainContentWrapper';
 
 const DUMMY_DEVICES = [{name: 'DEVICE 1'}, {name: 'DEVICE 2'}, {name: 'DEVICE 3'}]
 

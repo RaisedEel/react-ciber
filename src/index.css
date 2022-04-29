@@ -29,6 +29,11 @@ button {
   background-color: #187bcd;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+button.red-button {
+  background-color: #ba181b;
 }
 
 button:hover {
