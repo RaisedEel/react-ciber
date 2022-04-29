@@ -4,7 +4,7 @@ import classes from './ComputerItem.module.css';
 function ComputerItem(props) {
   return (
     <li>
-      <Card className={classes.item}>
+      <Card className={classes.computer}>
         <div className={classes.content}>
           <h3>{props.name}</h3>
           <hr />

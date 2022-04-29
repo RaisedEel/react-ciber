@@ -1,0 +1,33 @@
+.rental {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.rental p.name {
+  width: 30%;
+  font-weight: 700;
+}
+
+.data {
+  width: 60%;
+  background-color: lightgray;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.data p {
+  width: 20%;
+}
+
+.actions {
+  width: 7%;
+  display: flex;
+  justify-content: center;
+}
+
+.actions button {
+  width: 70%;
+  font-size: 1.3rem;
+}
