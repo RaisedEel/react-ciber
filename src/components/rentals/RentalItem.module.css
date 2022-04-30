@@ -10,7 +10,8 @@
   font-weight: 700;
 }
 
-.data , .result{
+.data,
+.result {
   width: 12%;
   text-align: center;
 }
