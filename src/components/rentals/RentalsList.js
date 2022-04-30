@@ -12,6 +12,7 @@ function RentalsList(props) {
         <span>Duración</span>
         <span>Precio 1 Hr</span>
         <span>Precio Total</span>
+        <span className={classes.last}/>
       </h4>
       <ul className={classes.list}>
         {props.rentals.map((rental) => (
