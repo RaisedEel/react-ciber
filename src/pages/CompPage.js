@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 
 import ComputerForm from '../components/computers/ComputerForm';
 import ComputersList from '../components/computers/ComputersList';
@@ -39,13 +39,25 @@ const DUMMY_COMPUTERS = [
 ];
 
 function CompPage() {
+  const [showForm, setShowForm] = useState(false);
+
+  const showFormHandler = () => {
+    setShowForm(true);
+  }
+
+  const closeFormHandler = () => {
+    setShowForm(false);
+  };
+
   return (
     <Fragment>
-      <Modal title='INSERTAR DATOS'>
-        <ComputerForm />
-      </Modal>
+      {showForm && (
+        <Modal title='INSERTAR DATOS' onClose={closeFormHandler}>
+          <ComputerForm onClose={closeFormHandler}/>
+        </Modal>
+      )}
       <MainContentWrapper title='LISTA DE COMPUTADORAS'>
-        <ComputersList computers={DUMMY_COMPUTERS} />
+        <ComputersList computers={DUMMY_COMPUTERS} onShowForm={showFormHandler} />
       </MainContentWrapper>
     </Fragment>
   );

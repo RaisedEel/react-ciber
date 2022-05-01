@@ -28,6 +28,7 @@
 }
 
 .actions button {
-  padding: 1% 2%;
+  padding: 1.5% 2.5%;
   margin: 0 5px;
+  font-weight: 700;
 }

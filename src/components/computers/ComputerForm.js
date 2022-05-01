@@ -1,6 +1,6 @@
 import classes from './ComputerForm.module.css';
 
-function ComputerForm() {
+function ComputerForm(props) {
   return (
     <form className={classes.form}>
       <div className={classes.inputBox}>
@@ -53,7 +53,9 @@ function ComputerForm() {
       </div>
 
       <div className={classes.actions}>
-        <button type='button'>Cancelar</button>
+        <button type='button' className='red-button' onClick={props.onClose}>
+          Cancelar
+        </button>
         <button type='button'>Subir Datos</button>
       </div>
     </form>

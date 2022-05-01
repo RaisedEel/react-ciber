@@ -5,7 +5,7 @@ function ComputersList(props) {
   return (
     <ul className={classes.list}>
       <li>
-        <button className={classes.button}>Agregar Nueva Computadora</button>
+        <button className={classes.button} onClick={props.onShowForm}>Agregar Nueva Computadora</button>
       </li>
       {props.computers.map((computer) => (
         <ComputerItem key={computer.name} {...computer} />
