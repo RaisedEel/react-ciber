@@ -1,4 +1,8 @@
+import { Fragment } from 'react';
+
+import ComputerForm from '../components/computers/ComputerForm';
 import ComputersList from '../components/computers/ComputersList';
+import Modal from '../components/ui/Modal';
 import MainContentWrapper from '../components/wrappers/MainContentWrapper';
 
 const DUMMY_COMPUTERS = [
@@ -36,9 +40,14 @@ const DUMMY_COMPUTERS = [
 
 function CompPage() {
   return (
-    <MainContentWrapper title='LISTA DE COMPUTADORAS'>
-      <ComputersList computers={DUMMY_COMPUTERS} />
-    </MainContentWrapper>
+    <Fragment>
+      <Modal>
+        <ComputerForm />
+      </Modal>
+      <MainContentWrapper title='LISTA DE COMPUTADORAS'>
+        <ComputersList computers={DUMMY_COMPUTERS} />
+      </MainContentWrapper>
+    </Fragment>
   );
 }
 
