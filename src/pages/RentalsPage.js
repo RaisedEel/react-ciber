@@ -1,5 +1,6 @@
 import MainContentWrapper from '../components/wrappers/MainContentWrapper';
 import RentalsList from '../components/rentals/RentalsList';
+import SearchRental from '../components/rentals/SearchRental';
 
 const DUMMY_RENTALS = [
   {
@@ -39,6 +40,7 @@ const DUMMY_RENTALS = [
 function RentalsPage() {
   return (
     <MainContentWrapper title='RENTAS ANTERIORES'>
+      <SearchRental />
       <RentalsList rentals={DUMMY_RENTALS} />
     </MainContentWrapper>
   );

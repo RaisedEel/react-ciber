@@ -8,7 +8,6 @@ function RentalItem(props) {
         <p className={classes.name}>{props.name}</p>
         <p className={classes.data}>{props.startTime}</p>
         <p className={classes.data}>{props.endTime}</p>
-        <p className={classes.data}>{props.duration} Hrs</p>
         <p className={classes.data}>$ {props.price}</p>
         <p className={classes.result}>$ {props.total}</p>
         <div className={classes.actions}>
