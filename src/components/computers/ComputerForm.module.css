@@ -1,0 +1,33 @@
+.inputBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3vh 0;
+}
+
+.inputBox label {
+  width: 30%;
+  margin-right: 5px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.inputBox input {
+  width: 45%;
+  font-size: 0.9rem;
+}
+
+.inputBox textarea {
+  width: 45%;
+  font-size: 0.9rem;
+  resize: none;
+}
+
+.actions {
+  text-align: right;
+}
+
+.actions button {
+  padding: 1% 2%;
+  margin: 0 5px;
+}

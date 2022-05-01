@@ -41,7 +41,7 @@ const DUMMY_COMPUTERS = [
 function CompPage() {
   return (
     <Fragment>
-      <Modal>
+      <Modal title='INSERTAR DATOS'>
         <ComputerForm />
       </Modal>
       <MainContentWrapper title='LISTA DE COMPUTADORAS'>

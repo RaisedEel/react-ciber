@@ -1,60 +1,60 @@
+import classes from './ComputerForm.module.css';
+
 function ComputerForm() {
   return (
-    <form>
-      <div>
-        <label for='clave'> Número del Equipo: </label>
-        <input
-          id='clave'
-          name='clave'
-          type='number'
-          min='0'
-          max='99999'
-          required
-        />
-        <br />
-        <br />
-
-        <label for='estado'> Estado: </label>
-        <input id='estado' name='estado' type='text' maxLength='100' required />
-        <br />
-        <br />
-
-        <label for='marca'> Marca: </label>
-        <input id='marca' name='marca' type='text' maxLength='100' required />
-        <br />
-        <br />
-
-        <label for='viejo'> Antigüedad: </label>
-        <input
-          id='viejo'
-          name='viejo'
-          type='number'
-          min='0'
-          max='999'
-          required
-        />
-        <br />
-        <br />
-
-        <label for='fecha'> Fecha del Último Chequeo: </label>
-        <input id='fecha' name='fecha' type='date' required />
-        <br />
-        <br />
-
-        <label for='serial'> Serial de la Computadora: </label>
-        <input id='serial' name='serial' type='text' maxLength='100' required />
-        <br />
-        <br />
+    <form className={classes.form}>
+      <div className={classes.inputBox}>
+        <label htmlFor='name'>Nombre Identificador: </label>
+        <input id='name' type='text' maxLength='50' required />
       </div>
 
-      <div>
+      <div className={classes.inputBox}>
+        <label htmlFor='price'>Precio por Hr: $</label>
         <input
-          id='submit'
-          type='button'
-          class='btn btn-primary'
-          value='Subir Datos'
+          id='price'
+          type='number'
+          min='1'
+          max='100'
+          placeholder='1'
+          required
         />
-        <br />
+      </div>
+
+      <div className={classes.inputBox}>
+        <label htmlFor='brand'>Marca: </label>
+        <input id='brand' type='text' maxLength='30' required />
+      </div>
+
+      <div className={classes.inputBox}>
+        <label htmlFor='antiquity'>Antigüedad: </label>
+        <input
+          id='antiquity'
+          type='number'
+          min='0'
+          max='99'
+          placeholder='0'
+          required
+        />
+      </div>
+
+      <div className={classes.inputBox}>
+        <label htmlFor='lastCheck'>Fecha del Último Chequeo: </label>
+        <input id='lastCheck' type='date' required />
+      </div>
+
+      <div className={classes.inputBox}>
+        <label htmlFor='serial'>Serial de la Computadora: </label>
+        <input id='serial' type='text' maxLength='20' required />
+      </div>
+
+      <div className={classes.inputBox}>
+        <label htmlFor='description'>Descripción General: </label>
+        <textarea id='description' maxLength='150' rows='3' required />
+      </div>
+
+      <div className={classes.actions}>
+        <button type='button'>Cancelar</button>
+        <button type='button'>Subir Datos</button>
       </div>
     </form>
   );
