@@ -2,6 +2,7 @@ import { Fragment, useState } from 'react';
 
 import ComputerForm from '../components/computers/ComputerForm';
 import ComputersList from '../components/computers/ComputersList';
+import Alert from '../components/ui/Alert';
 import Modal from '../components/ui/Modal';
 import MainContentWrapper from '../components/wrappers/MainContentWrapper';
 
@@ -41,6 +42,7 @@ const DUMMY_COMPUTERS = [
 function CompPage() {
   const [showForm, setShowForm] = useState(false);
   const [initialFormValues, setInitialFormValues] = useState(null);
+  const [showAlert, setShowAlert] = useState(false);
 
   const closeFormHandler = () => {
     setShowForm(false);
@@ -56,20 +58,40 @@ function CompPage() {
     setShowForm(true);
   };
 
+  const closeAlertHandler = () => {
+    setShowAlert(false);
+  };
+
+  const showAlertHandler = () => {
+    setShowAlert(true);
+  };
+
   return (
     <Fragment>
       {showForm && (
-        <Modal title='INSERTAR DATOS' onClose={closeFormHandler}>
+        <Modal
+          title={initialFormValues ? 'ACTUALIZAR DATOS' : 'INSERTAR DATOS'}
+          onClose={closeFormHandler}
+        >
           <ComputerForm
             onClose={closeFormHandler}
             initValues={initialFormValues}
           />
         </Modal>
       )}
+      {showAlert && (
+        <Alert
+          title='ELIMINAR REGISTRO'
+          message='¿Esta seguro que desea eliminar este registro?'
+          close={{ message: 'Cancelar', onClick: closeAlertHandler }}
+          confirm={{ message: 'Eliminarlo', onClick: () => {} }}
+        />
+      )}
       <MainContentWrapper title='LISTA DE COMPUTADORAS'>
         <ComputersList
           computers={DUMMY_COMPUTERS}
           onShowForm={showFormHandler}
+          onDelete={showAlertHandler}
         />
       </MainContentWrapper>
     </Fragment>

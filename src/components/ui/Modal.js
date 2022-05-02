@@ -1,4 +1,6 @@
-import { Fragment } from 'react';
+import { Fragment} from 'react';
+import { createPortal } from 'react-dom';
+
 import classes from './Modal.module.css';
 
 function Modal(props) {
@@ -8,7 +10,7 @@ function Modal(props) {
     }
   };
 
-  return (
+  return createPortal(
     <Fragment>
       <div className={classes.backdrop} onClick={onCloseHandler}>
         <div className={classes.modal}>
@@ -20,7 +22,7 @@ function Modal(props) {
         </div>
       </div>
     </Fragment>
-  );
+  , document.getElementById('modal-overlay'));
 }
 
 export default Modal;

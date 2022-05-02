@@ -11,11 +11,11 @@ function RentalsList(props) {
         <span>Hora Final</span>
         <span>Precio 1 Hr</span>
         <span>Precio Total</span>
-        <span className={classes.last}/>
+        <span className={classes.last} />
       </h4>
       <ul className={classes.list}>
         {props.rentals.map((rental) => (
-          <RentalItem key={rental.name} {...rental} />
+          <RentalItem key={rental.name} {...rental} onDelete={props.onDelete} />
         ))}
       </ul>
     </Fragment>

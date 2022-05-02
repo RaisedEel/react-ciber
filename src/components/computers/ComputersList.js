@@ -14,6 +14,7 @@ function ComputersList(props) {
           key={computer.name}
           {...computer}
           onUpdate={props.onShowForm.bind(null, computer)}
+          onDelete={props.onDelete}
         />
       ))}
     </ul>
