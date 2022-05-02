@@ -11,7 +11,7 @@ const DUMMY_COMPUTERS = [
     price: 10,
     brand: 'Dell',
     antiquity: 10,
-    revision: new Date().toDateString(),
+    revision: new Date().toISOString().slice(0, 10),
     serial: '123456789',
     description:
       'La computadora tiene Windows instalado. Algunos juegos también. Tristemente ha estado fallando los últimos días.',
@@ -21,7 +21,7 @@ const DUMMY_COMPUTERS = [
     price: 10,
     brand: 'Mac',
     antiquity: 5,
-    revision: new Date().toDateString(),
+    revision: new Date().toISOString().slice(0, 10),
     serial: '123456789',
     description:
       'La computadora tiene Windows instalado. Algunos juegos también. Tristemente ha estado fallando los últimos días.',
@@ -31,7 +31,7 @@ const DUMMY_COMPUTERS = [
     price: 10,
     brand: 'HP',
     antiquity: 10,
-    revision: new Date().toDateString(),
+    revision: new Date().toISOString().slice(0, 10),
     serial: '123456789',
     description:
       'La computadora tiene Windows instalado. Algunos juegos también. Funciona correctamente.',
@@ -40,24 +40,37 @@ const DUMMY_COMPUTERS = [
 
 function CompPage() {
   const [showForm, setShowForm] = useState(false);
-
-  const showFormHandler = () => {
-    setShowForm(true);
-  }
+  const [initialFormValues, setInitialFormValues] = useState(null);
 
   const closeFormHandler = () => {
     setShowForm(false);
+  };
+
+  const showFormHandler = (formValues) => {
+    if (formValues) {
+      setInitialFormValues(formValues);
+    } else {
+      setInitialFormValues(null);
+    }
+
+    setShowForm(true);
   };
 
   return (
     <Fragment>
       {showForm && (
         <Modal title='INSERTAR DATOS' onClose={closeFormHandler}>
-          <ComputerForm onClose={closeFormHandler}/>
+          <ComputerForm
+            onClose={closeFormHandler}
+            initValues={initialFormValues}
+          />
         </Modal>
       )}
       <MainContentWrapper title='LISTA DE COMPUTADORAS'>
-        <ComputersList computers={DUMMY_COMPUTERS} onShowForm={showFormHandler} />
+        <ComputersList
+          computers={DUMMY_COMPUTERS}
+          onShowForm={showFormHandler}
+        />
       </MainContentWrapper>
     </Fragment>
   );

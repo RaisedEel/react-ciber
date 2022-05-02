@@ -35,7 +35,7 @@ function ComputerItem(props) {
           </div>
         </div>
         <div className={classes.actions}>
-          <button>&#128393;</button>
+          <button onClick={props.onUpdate}>&#128393;</button>
           <button className='red-button'>&#128465;</button>
         </div>
       </Card>
