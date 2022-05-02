@@ -22,9 +22,16 @@
 }
 
 .badge p {
-  color: #ba181b;
   font-weight: 700;
   text-align: center;
+}
+
+.occupied {
+  color: #ba181b;
+}
+
+.free {
+  color: green;
 }
 
 .content {
