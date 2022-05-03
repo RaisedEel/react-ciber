@@ -43,6 +43,11 @@ function ComputerForm(props) {
       description: enteredDescription,
     };
 
+    const newDevice = {
+      name: enteredName,
+      price: enteredPrice,
+    };
+
     if (
       computers.some((computer) => computer.name === enteredName) &&
       !props.initValues.name
@@ -50,17 +55,32 @@ function ComputerForm(props) {
       setError(true);
       return;
     }
-    dispatch(computersActions.addComputer(newComputer));
-    dispatch(
-      panelActions.addDevice({ name: enteredName, price: enteredPrice })
-    );
+
+    if (props.initValues.name) {
+      dispatch(
+        computersActions.updateComputer({
+          identification: props.initValues.name,
+          updatedValues: newComputer,
+        })
+      );
+      dispatch(
+        panelActions.updateDevice({
+          identification: props.initValues.name,
+          updatedValues: newDevice,
+        })
+      );
+    } else {
+      dispatch(computersActions.addComputer(newComputer));
+      dispatch(panelActions.addDevice(newDevice));
+    }
+
     props.onClose();
   };
 
   return (
     <form onSubmit={onSubmitHandler}>
       {error && (
-        <p className={classes.error}>
+        <p className='error'>
           Se encontró un elemento con este nombre. Ingrese un nombre único.
         </p>
       )}

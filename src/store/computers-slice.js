@@ -45,6 +45,12 @@ const computersSlice = createSlice({
     addComputer(state, action) {
       state.computers.push(action.payload);
     },
+    updateComputer(state, action) {
+      const indexComp = state.computers.findIndex(
+        (computer) => computer.name === action.payload.identification
+      );
+      state.computers[indexComp] = action.payload.updatedValues;
+    },
     removeComputer(state, action) {
       state.computers = state.computers.filter(
         (computer) => computer.name !== action.payload

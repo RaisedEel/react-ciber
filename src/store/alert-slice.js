@@ -8,6 +8,7 @@ const alertSlice = createSlice({
     message: '',
     close: '',
     confirm: '',
+    extra: {},
   },
   reducers: {
     setAlert(state, action) {
@@ -16,6 +17,7 @@ const alertSlice = createSlice({
       state.message = action.payload.message;
       state.close = action.payload.close;
       state.confirm = action.payload.confirm;
+      state.extra = action.payload.extra;
     },
     hideAlert(state) {
       state.showAlert = false;

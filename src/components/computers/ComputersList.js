@@ -17,6 +17,7 @@ function ComputersList(props) {
           onDelete={props.onDelete}
         />
       ))}
+      {props.computers.length === 0 && <p className='error'>No se encontraron registros. Agregue una nueva computadora.</p>}
     </ul>
   );
 }

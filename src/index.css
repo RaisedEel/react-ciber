@@ -39,3 +39,13 @@ button.red-button {
 button:hover {
   filter: brightness(85%);
 }
+
+.error {
+  color: whitesmoke;
+  background-color: #ba181b;
+  text-align: center;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+  width: 100%;
+}

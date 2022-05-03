@@ -7,6 +7,7 @@ function DeviceList(props) {
       {props.devices.map((device) => (
         <DeviceItem key={device.name} name={device.name} />
       ))}
+      {props.devices.length === 0 && <p className='error'>No se encontraron registros. Agregue una nueva computadora en <strong>EQUIPOS</strong>.</p>}
     </div>
   );
 }
