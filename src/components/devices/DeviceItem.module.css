@@ -26,12 +26,24 @@
   text-align: center;
 }
 
-.occupied {
+.red {
   color: #ba181b;
 }
 
-.free {
+.green {
   color: green;
+}
+
+.yellow {
+  color: gold;
+}
+
+.blue {
+  color: #187bcd;
+}
+
+.gray {
+  color: darkgray;
 }
 
 .content {
@@ -74,7 +86,6 @@
 }
 
 .timer {
-  color: green;
   font-size: 1.8rem;
   font-weight: 700;
   width: 100%;
