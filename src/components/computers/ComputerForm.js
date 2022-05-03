@@ -1,8 +1,15 @@
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
+import { computersActions } from '../../store/computers-slice';
+import { panelActions } from '../../store/panel-slice';
 import classes from './ComputerForm.module.css';
 
 function ComputerForm(props) {
+  const { computers } = useSelector((state) => state.computers);
+  const dispatch = useDispatch();
+
+  const [error, setError] = useState(false);
   const [enteredName, setEnteredName] = useState(props.initValues.name || '');
   const [enteredPrice, setEnteredPrice] = useState(
     props.initValues.price || ''
@@ -36,11 +43,27 @@ function ComputerForm(props) {
       description: enteredDescription,
     };
 
-    console.log(newComputer);
+    if (
+      computers.some((computer) => computer.name === enteredName) &&
+      !props.initValues.name
+    ) {
+      setError(true);
+      return;
+    }
+    dispatch(computersActions.addComputer(newComputer));
+    dispatch(
+      panelActions.addDevice({ name: enteredName, price: enteredPrice })
+    );
+    props.onClose();
   };
 
   return (
-    <form onSubmit={onSubmitHandler} className={classes.form}>
+    <form onSubmit={onSubmitHandler}>
+      {error && (
+        <p className={classes.error}>
+          Se encontró un elemento con este nombre. Ingrese un nombre único.
+        </p>
+      )}
       <div className={classes.inputBox}>
         <label htmlFor='name'>Nombre Identificador: </label>
         <input

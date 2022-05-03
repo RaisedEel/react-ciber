@@ -12,7 +12,7 @@ function Alert(props) {
         >
           {props.close.message}
         </button>
-        {props.confirm && (
+        {props.confirm.message && (
           <button onClick={props.confirm.onClick}>
             {props.confirm.message}
           </button>

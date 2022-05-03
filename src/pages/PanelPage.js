@@ -1,12 +1,14 @@
+import { useSelector } from 'react-redux';
+
 import DeviceList from '../components/devices/DevicesList';
 import MainContentWrapper from '../components/wrappers/MainContentWrapper';
 
-const DUMMY_DEVICES = [{name: 'DEVICE 1'}, {name: 'DEVICE 2'}, {name: 'DEVICE 3'}]
-
 function PanelPage() {
+  const { devices: loadedDevices } = useSelector((state) => state.panel);
+
   return (
     <MainContentWrapper title='PANEL DE CONTROL'>
-      <DeviceList devices = {DUMMY_DEVICES} />
+      <DeviceList devices={loadedDevices} />
     </MainContentWrapper>
   );
 }

@@ -5,7 +5,7 @@ function ComputersList(props) {
   return (
     <ul className={classes.list}>
       <li>
-        <button className={classes.button} onClick={props.onShowForm}>
+        <button className={classes.button} onClick={() => props.onShowForm()}>
           Agregar Nueva Computadora
         </button>
       </li>

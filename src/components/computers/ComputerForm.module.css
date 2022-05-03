@@ -1,3 +1,11 @@
+.error {
+  color: whitesmoke;
+  background-color: #ba181b;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 .inputBox {
   display: flex;
   justify-content: center;
