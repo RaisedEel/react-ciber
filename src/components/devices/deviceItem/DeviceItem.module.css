@@ -51,24 +51,6 @@
   margin: 5px;
 }
 
-.input {
-  display: flex;
-}
-
-.input span {
-  flex: 1;
-  border: 1px solid gray;
-  text-align: right;
-  border-radius: 5px;
-}
-
-.input-actions button {
-  width: 30px;
-  height: 100%;
-  margin-left: 5px;
-  font-weight: 700;
-}
-
 .actions {
   display: flex;
   justify-content: space-evenly;
@@ -83,6 +65,14 @@
 
 .rent-info {
   text-align: center;
+}
+
+.price {
+  padding: 0 5%;
+  margin-left: 10%;
+  background-color: lightgray;
+  font-weight: 700;
+  border-radius: 5px;
 }
 
 .timer {

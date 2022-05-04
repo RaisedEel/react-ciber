@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { useSelector } from 'react-redux';
 
 import DeviceList from '../components/devices/DevicesList';
@@ -7,9 +8,11 @@ function PanelPage() {
   const { devices: loadedDevices } = useSelector((state) => state.panel);
 
   return (
-    <MainContentWrapper title='PANEL DE CONTROL'>
-      <DeviceList devices={loadedDevices} />
-    </MainContentWrapper>
+    <Fragment>
+      <MainContentWrapper title='PANEL DE CONTROL'>
+        <DeviceList devices={loadedDevices} />
+      </MainContentWrapper>
+    </Fragment>
   );
 }
 
