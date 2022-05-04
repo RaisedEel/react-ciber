@@ -18,7 +18,7 @@ function ComputerItem(props) {
             </p>
             <p>
               <strong>Años de Antigüedad: </strong>
-              {props.antiquity} years
+              {props.antiquity} años
             </p>
             <p>
               <strong>Ultima Revisión: </strong>

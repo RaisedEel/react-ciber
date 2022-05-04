@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { alertActions } from '../store/alert-slice';
 import { computersActions } from '../store/computers-slice';
 import { panelActions } from '../store/panel-slice';
-import ComputerForm from '../components/computers/ComputerForm';
+import ComputerForm from '../components/computers/computerForm/ComputerForm';
 import ComputersList from '../components/computers/ComputersList';
 import Alert from '../components/ui/Alert';
 import Modal from '../components/ui/Modal';
@@ -30,7 +30,15 @@ function CompPage() {
     if (formValues) {
       setInitialFormValues(formValues);
     } else {
-      setInitialFormValues({});
+      setInitialFormValues({
+        name: '',
+        price: '',
+        brand: '',
+        antiquity: '',
+        revision: '',
+        serial: '',
+        description: '',
+      });
     }
 
     setShowForm(true);
