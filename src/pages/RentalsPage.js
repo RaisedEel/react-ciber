@@ -1,9 +1,6 @@
-import { Fragment, useState } from 'react';
-
 import MainContentWrapper from '../components/wrappers/MainContentWrapper';
 import RentalsList from '../components/rentals/RentalsList';
 import SearchRental from '../components/rentals/SearchRental';
-import Alert from '../components/ui/Alert';
 
 const DUMMY_RENTALS = [
   {
@@ -41,31 +38,11 @@ const DUMMY_RENTALS = [
 ];
 
 function RentalsPage() {
-  const [showAlert, setShowAlert] = useState(false);
-
-  const closeAlertHandler = () => {
-    setShowAlert(false);
-  };
-
-  const showAlertHandler = () => {
-    setShowAlert(true);
-  };
-
   return (
-    <Fragment>
-      {showAlert && (
-        <Alert
-          title='ELIMINAR REGISTRO'
-          message='¿Esta seguro que desea eliminar este registro?'
-          close={{ message: 'Cancelar', onClick: closeAlertHandler }}
-          confirm={{ message: 'Eliminarlo', onClick: () => {} }}
-        />
-      )}
-      <MainContentWrapper title='RENTAS ANTERIORES'>
-        <SearchRental />
-        <RentalsList rentals={DUMMY_RENTALS} onDelete={showAlertHandler} />
-      </MainContentWrapper>
-    </Fragment>
+    <MainContentWrapper title='RENTAS ANTERIORES'>
+      <SearchRental />
+      <RentalsList rentals={DUMMY_RENTALS} />
+    </MainContentWrapper>
   );
 }
 

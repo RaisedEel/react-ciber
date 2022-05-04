@@ -1,22 +1,16 @@
+import { useSelector } from 'react-redux';
+
 import Modal from './Modal';
 import classes from './Alert.module.css';
 
 function Alert(props) {
+  const { title, message, okMessage } = useSelector((state) => state.alert);
+
   return (
-    <Modal title={props.title} onClose={props.close.onClick}>
-      <p>{props.message}</p>
+    <Modal title={title} onClose={props.onClose}>
+      <p>{message}</p>
       <div className={classes.actions}>
-        <button
-          onClick={props.close.onClick}
-          className={props.confirm && 'red-button'}
-        >
-          {props.close.message}
-        </button>
-        {props.confirm.message && (
-          <button onClick={props.confirm.onClick}>
-            {props.confirm.message}
-          </button>
-        )}
+        <button onClick={props.onClose}>{okMessage}</button>
       </div>
     </Modal>
   );

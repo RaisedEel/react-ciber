@@ -15,7 +15,7 @@ function RentalsList(props) {
       </h4>
       <ul className={classes.list}>
         {props.rentals.map((rental) => (
-          <RentalItem key={rental.name} {...rental} onDelete={props.onDelete} />
+          <RentalItem key={rental.name} {...rental} />
         ))}
       </ul>
     </Fragment>

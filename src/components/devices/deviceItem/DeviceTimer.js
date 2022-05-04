@@ -3,6 +3,7 @@ import { Fragment } from 'react';
 function DeviceTimer(props) {
   let hours = props.time / 60;
   let minutes = Math.floor(props.time % 60);
+  
   if (props.counter) {
     hours = Math.floor(hours);
   } else {

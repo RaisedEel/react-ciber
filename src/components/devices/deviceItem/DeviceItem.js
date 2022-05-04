@@ -48,7 +48,6 @@ function DeviceItem(props) {
   };
 
   const stopRentHandler = () => {
-    setRentTime(0);
     dispatch(
       panelActions.updateDevice({
         identification: props.name,

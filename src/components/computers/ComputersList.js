@@ -14,7 +14,6 @@ function ComputersList(props) {
           key={computer.name}
           {...computer}
           onUpdate={props.onShowForm.bind(null, computer)}
-          onDelete={props.onDelete}
         />
       ))}
       {props.computers.length === 0 && <p className='error'>No se encontraron registros. Agregue una nueva computadora.</p>}

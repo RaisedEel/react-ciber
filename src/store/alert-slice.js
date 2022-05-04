@@ -3,24 +3,18 @@ import { createSlice } from '@reduxjs/toolkit';
 const alertSlice = createSlice({
   name: 'alert',
   initialState: {
-    showAlert: false,
-    title: '',
-    message: '',
-    close: '',
-    confirm: '',
-    extra: {},
+    alert: null,
   },
   reducers: {
     setAlert(state, action) {
-      state.showAlert = true;
-      state.title = action.payload.title;
-      state.message = action.payload.message;
-      state.close = action.payload.close;
-      state.confirm = action.payload.confirm;
-      state.extra = action.payload.extra;
+      state.alert = {
+        title: action.payload.title,
+        message: action.payload.message,
+        okMessage: action.payload.message,
+      };
     },
     hideAlert(state) {
-      state.showAlert = false;
+      state.alert = null;
     },
   },
 });

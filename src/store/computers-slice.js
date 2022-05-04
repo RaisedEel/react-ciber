@@ -43,7 +43,7 @@ const computersSlice = createSlice({
       state.computers = action.payload;
     },
     addComputer(state, action) {
-      state.computers.push(action.payload);
+      state.computers.unshift(action.payload);
     },
     updateComputer(state, action) {
       const indexComp = state.computers.findIndex(

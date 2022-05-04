@@ -11,9 +11,7 @@ function RentalItem(props) {
         <p className={classes.data}>$ {props.price}</p>
         <p className={classes.result}>$ {props.total}</p>
         <div className={classes.actions}>
-          <button className='red-button' onClick={props.onDelete}>
-            &#128465;
-          </button>
+          <button className='red-button'>&#128465;</button>
         </div>
       </Card>
     </li>

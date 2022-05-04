@@ -28,8 +28,11 @@ function ComputerForm(props) {
     };
 
     if (
-      computers.some((computer) => computer.name === enteredValues.name) &&
-      !initValues.name
+      computers.some(
+        (computer) =>
+          computer.name === enteredValues.name &&
+          initValues.name !== enteredValues.name
+      )
     ) {
       setError(true);
       return;
