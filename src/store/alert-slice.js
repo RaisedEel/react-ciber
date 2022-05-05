@@ -10,7 +10,7 @@ const alertSlice = createSlice({
       state.alert = {
         title: action.payload.title,
         message: action.payload.message,
-        okMessage: action.payload.message,
+        okMessage: action.payload.okMessage,
       };
     },
     hideAlert(state) {

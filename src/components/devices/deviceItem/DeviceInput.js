@@ -1,10 +1,11 @@
 import { useDispatch } from 'react-redux';
 
+import { alertActions } from '../../../store/alert-slice';
 import { panelActions } from '../../../store/panel-slice';
 import classes from './DeviceInput.module.css';
 
 function DeviceInput(props) {
-  const {rentedHours, rentTime} = props;
+  const { rentedHours, rentTime } = props;
   const dispatch = useDispatch();
 
   const addHoursHandler = () => {
@@ -24,6 +25,15 @@ function DeviceInput(props) {
         panelActions.updateDevice({
           identification: props.name,
           updatedValues: { rentedHours: rentedHours - 0.5 },
+        })
+      );
+    } else {
+      dispatch(
+        alertActions.setAlert({
+          title: 'Aviso',
+          message:
+            'No se puede reducir el numero de horas rentadas a menor que 0 o el numero de horas de la renta actual.',
+          okMessage: 'Entendido',
         })
       );
     }

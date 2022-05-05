@@ -1,6 +1,7 @@
 .actions {
   display: flex;
   justify-content: flex-end;
+  margin: 1vh 0;
 }
 
 .actions button {
