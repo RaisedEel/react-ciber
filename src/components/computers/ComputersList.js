@@ -16,7 +16,11 @@ function ComputersList(props) {
           onUpdate={props.onShowForm.bind(null, computer)}
         />
       ))}
-      {props.computers.length === 0 && <p className='error'>No se encontraron registros. Agregue una nueva computadora.</p>}
+      {props.computers.length === 0 && (
+        <p className='error'>
+          No se encontraron registros. Agregue una nueva computadora.
+        </p>
+      )}
     </ul>
   );
 }

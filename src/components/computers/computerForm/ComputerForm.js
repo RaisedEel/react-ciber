@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { computersActions } from '../../../store/computers-slice';
 import { panelActions } from '../../../store/panel-slice';
 import InputBox from './InputBox';
+import getDate from '../../../helpers/getDate';
 import classes from './ComputerForm.module.css';
 
 function ComputerForm(props) {
@@ -118,7 +119,7 @@ function ComputerForm(props) {
         label='Fecha del Último Chequeo: '
         configuration={{
           type: 'date',
-          max: new Date().toISOString().slice(0, 10),
+          max: getDate(new Date()),
           value: enteredValues.revision,
           onChange: (event) => updateValue('revision', event.target.value),
         }}

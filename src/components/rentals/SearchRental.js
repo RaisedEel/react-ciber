@@ -1,12 +1,27 @@
+import { useRef } from 'react';
+
+import getDate from '../../helpers/getDate';
 import classes from './SearchRental.module.css';
 
-function SearchRental() {
+function SearchRental(props) {
+  const dateInput = useRef();
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+    props.onSubmit(dateInput.current.value);
+  };
+
   return (
-    <form className={classes.search}>
+    <form onSubmit={submitHandler} className={classes.search}>
       <div className={classes.inputBox}>
         <label htmlFor='search'>Día de la Renta: </label>
-        <input id='search' type='date' defaultValue={new Date().toISOString().slice(0,10)} />
-        <button type='button'>Buscar</button>
+        <input
+          ref={dateInput}
+          id='search'
+          type='date'
+          defaultValue={getDate(new Date())}
+        />
+        <button>Buscar</button>
       </div>
     </form>
   );

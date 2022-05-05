@@ -15,8 +15,13 @@ function RentalsList(props) {
       </h4>
       <ul className={classes.list}>
         {props.rentals.map((rental) => (
-          <RentalItem key={rental.name} {...rental} />
+          <RentalItem key={rental.id} {...rental} />
         ))}
+        {props.rentals.length === 0 && (
+          <p className='error'>
+            No se encontraron rentas registradas en este día.
+          </p>
+        )}
       </ul>
     </Fragment>
   );

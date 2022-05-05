@@ -26,8 +26,8 @@ function ComputerItem(props) {
     <Fragment>
       {confirmDelete && (
         <Confirm
-          title='Eliminar Registro'
-          message='¿Esta seguro que desea eliminar este registro?'
+          title='Eliminar Computadora'
+          message='¿Esta seguro que desea eliminar la instancia de esta computadora?'
           onCancel={hideConfirmDelete}
           onConfirm={deleteComputerHandler}
         />
