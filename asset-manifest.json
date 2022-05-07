@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/react-ciber/static/css/main.06018c40.css",
-    "main.js": "/react-ciber/static/js/main.a870b833.js",
+    "main.js": "/react-ciber/static/js/main.a48ce27b.js",
     "static/media/device.png": "/react-ciber/static/media/device.1f9fba0d0236dcf74229.png",
     "static/media/rentas.png": "/react-ciber/static/media/rentas.9a87a369cb8943377f61.png",
     "static/media/head.jpg": "/react-ciber/static/media/head.273d9be76c9306205f81.jpg",
     "static/media/panel.png": "/react-ciber/static/media/panel.16224a76db20f245d973.png",
     "index.html": "/react-ciber/index.html",
     "main.06018c40.css.map": "/react-ciber/static/css/main.06018c40.css.map",
-    "main.a870b833.js.map": "/react-ciber/static/js/main.a870b833.js.map"
+    "main.a48ce27b.js.map": "/react-ciber/static/js/main.a48ce27b.js.map"
   },
   "entrypoints": [
     "static/css/main.06018c40.css",
-    "static/js/main.a870b833.js"
+    "static/js/main.a48ce27b.js"
   ]
 }
