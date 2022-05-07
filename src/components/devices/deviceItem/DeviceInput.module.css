@@ -1,12 +1,23 @@
 .input {
   display: flex;
+  justify-content: space-evenly;
 }
 
-.input span {
+.label {
   flex: 1;
+}
+
+.value {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 15%;
   border: 1px solid gray;
-  text-align: right;
   border-radius: 5px;
+}
+
+.input-actions {
+  display: flex;
 }
 
 .input-actions button {

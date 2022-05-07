@@ -1,14 +1,23 @@
 .menu {
   width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   margin-bottom: 0.5%;
   border-radius: 0px 10px 10px 0px;
   background-color: #ba181b;
 }
 
-.menu h3 {
-  height: 6%;
-}
-.menu h4 {
-  height: 10%;
+.title {
+  height: 5%;
 }
 
+.back {
+  height: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}

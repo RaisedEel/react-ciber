@@ -15,14 +15,11 @@ function getFinalResults(rentResult) {
     minutes: Math.floor(timeNow % 60),
   };
 
-  let total;
-  if (duration / 60 < 1) {
-    total = rentResult.price * 0.5;
+  let total = rentResult.price * Math.floor(duration / 60);
+  if (duration % 60 >= 30) {
+    total += rentResult.price * 1;
   } else {
-    total = rentResult.price * Math.floor(duration / 60);
-    if (duration % 60 >= 30) {
-      total += rentResult.price * 0.5;
-    }
+    total += rentResult.price * 0.5;
   }
 
   return {

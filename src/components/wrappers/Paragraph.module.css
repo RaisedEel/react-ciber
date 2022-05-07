@@ -1,0 +1,12 @@
+.paragraph {
+  text-align: justify;
+  padding: 1%;
+}
+
+.paragraph h3 {
+  margin: 2vh 0;
+}
+
+.detail .p {
+  margin: 0.5vh 0;
+}

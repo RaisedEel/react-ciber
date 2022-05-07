@@ -114,10 +114,11 @@ function DeviceItem(props) {
           </div>
           <hr />
           <div className={classes['rent-info']}>
-            <strong>
+            <p className={classes.info}><strong>
               Hora Inicial: <DeviceTimer time={initialTime} />
             </strong>
             <span className={classes.price}>$ {props.price}</span>
+            </p>
             <p
               className={`${classes.timer} ${
                 initialTime

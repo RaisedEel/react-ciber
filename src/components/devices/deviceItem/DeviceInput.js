@@ -41,11 +41,11 @@ function DeviceInput(props) {
 
   return (
     <div className={classes.input}>
-      Horas a Rentar:<span>{rentedHours}</span>
-      <div className={classes['input-actions']}>
+      <span className={classes.label}>Horas a Rentar:</span><span className={classes.value}>{rentedHours}</span>
+      <span className={classes['input-actions']}>
         <button onClick={addHoursHandler}>+0.5</button>
         <button onClick={removeHoursHandler}>-0.5</button>
-      </div>
+      </span>
     </div>
   );
 }
