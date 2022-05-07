@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import getDate from '../../helpers/getDate';
 import classes from './SearchRental.module.css';
 
+// Handle the date input
 function SearchRental(props) {
   const dateInput = useRef();
 

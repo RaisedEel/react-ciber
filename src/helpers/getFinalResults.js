@@ -1,6 +1,7 @@
 import getDate from './getDate';
 import getTimeInMinutes from './getTimeInMinutes';
 
+// Converts the data received to a valid format to show on DeviceRentResult and store it
 function getFinalResults(rentResult) {
   const timeNow = getTimeInMinutes();
   const duration = Math.floor(timeNow - rentResult.initialTime);

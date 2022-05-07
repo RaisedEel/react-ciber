@@ -1,6 +1,27 @@
-# Getting Started with Create React App
+# react-ciber project
+
+Check the functional page here:
+https://raisedeel.github.io/react-ciber
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Description
+
+Simple app designed for managing the rentals of a small cyber-cafe.
+
+## Features
+
+- Uses React-Redux (Toolkit) for storing computers and rents (Could be easily upgraded to function with HTTP Requests for now works with dummy info).
+- Uses React-Router to handle different pages, all on the same app.
+- Allows to add, modify and delete computers on the app.
+- Set timers for each rent in minutes and also shows visual cues to alert the user when the time is up.
+- Calculates the total price of each rent based on the price the user entered.
+- Store each successful rent and sort them based on the date it was concluded.
+- Allows to search for different rents based on the date.
+- Modal and Menu integrated.
+- Pleasing design and easy to use.
 
 ## Available Scripts
 

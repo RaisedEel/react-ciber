@@ -1,5 +1,6 @@
 import classes from './InputBox.module.css';
 
+// Created to save some space in the form
 function InputBox(props) {
   return (
     <div className={classes.inputBox}>

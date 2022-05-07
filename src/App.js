@@ -12,6 +12,7 @@ import { useSelector } from 'react-redux';
 function App() {
   const { alert } = useSelector((state) => state.alert);
 
+  // Alert is just rendered here, but to show it, the dispatch function setAlert has to be used
   return (
     <Fragment>
       {alert && <Alert />}

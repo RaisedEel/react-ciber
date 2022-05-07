@@ -1,13 +1,13 @@
 import { Fragment, useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import useModal from '../../../hooks/useModal';
 
 import { panelActions } from '../../../store/panel-slice';
 import Card from '../../wrappers/Card';
-import device from '../../../assets/device.png';
 import DeviceTimer from './DeviceTimer';
 import DeviceInput from './DeviceInput';
 import Confirm from '../../ui/Confirm';
-import useModal from '../../../hooks/useModal';
+import device from '../../../assets/device.png';
 import getTimeInMinutes from '../../../helpers/getTimeInMinutes';
 import classes from './DeviceItem.module.css';
 
@@ -18,9 +18,12 @@ function DeviceItem(props) {
     (device) => device.name === props.name
   );
 
+  // If a initialTime has been set on the store, subtract it from the current time
   const [rentTime, setRentTime] = useState(
     initialTime ? Math.floor(getTimeInMinutes() - initialTime) : 0
   );
+
+  // Just used to confirm that the rent should be stored
   const [confirmEnding, setConfirmEnding] = useState(false);
   const {
     state: confirmAction,
@@ -28,6 +31,7 @@ function DeviceItem(props) {
     hide: hideConfirmAction,
   } = useModal();
 
+  // Adds 1 minute to the timer if a rent has been started
   useEffect(() => {
     const interval = setInterval(() => {
       if (initialTime > 0) {
@@ -51,6 +55,7 @@ function DeviceItem(props) {
   };
 
   const confirmActionHandler = () => {
+    // Stop the rent
     dispatch(
       panelActions.updateDevice({
         identification: props.name,
@@ -59,6 +64,7 @@ function DeviceItem(props) {
     );
     hideConfirmAction();
     if (confirmEnding) {
+      // Send the result
       props.onRentalEnd();
     }
   };
@@ -81,11 +87,13 @@ function DeviceItem(props) {
         </div>
         <div className={classes.content}>
           <h4>{props.name}</h4>
+
           <DeviceInput
             name={props.name}
             rentedHours={rentedHours}
             rentTime={rentTime}
           />
+
           <div className={classes.actions}>
             {!initialTime && (
               <button onClick={startRentHandler}>Comenzar Tiempo</button>
@@ -114,10 +122,11 @@ function DeviceItem(props) {
           </div>
           <hr />
           <div className={classes['rent-info']}>
-            <p className={classes.info}><strong>
-              Hora Inicial: <DeviceTimer time={initialTime} />
-            </strong>
-            <span className={classes.price}>$ {props.price}</span>
+            <p className={classes.info}>
+              <strong>
+                Hora Inicial: <DeviceTimer time={initialTime} />
+              </strong>
+              <span className={classes.price}>$ {props.price}</span>
             </p>
             <p
               className={`${classes.timer} ${

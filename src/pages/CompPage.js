@@ -14,6 +14,8 @@ function CompPage() {
     (state) => state.computers
   );
 
+  // Give the initial values to the form, each ComputerItem has a copy with their values bound
+  // (The bind can be find on ComputerList)
   const showFormHandler = (formValues) => {
     if (formValues) {
       setInitialFormValues(formValues);

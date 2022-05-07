@@ -1,7 +1,7 @@
 import DeviceItem from './deviceItem/DeviceItem';
 import classes from './DevicesList.module.css';
 
-function DeviceList(props) {
+function DevicesList(props) {
   return (
     <section className={classes.list}>
       {props.devices.map((device) => (
@@ -22,4 +22,4 @@ function DeviceList(props) {
   );
 }
 
-export default DeviceList;
+export default DevicesList;

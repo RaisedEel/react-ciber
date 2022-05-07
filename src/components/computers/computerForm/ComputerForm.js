@@ -8,13 +8,13 @@ import getDate from '../../../helpers/getDate';
 import classes from './ComputerForm.module.css';
 
 function ComputerForm(props) {
-  const { computers } = useSelector((state) => state.computers);
-  const dispatch = useDispatch();
-  const [error, setError] = useState(false);
   const { initValues } = props;
+  const dispatch = useDispatch();
+  const { computers } = useSelector((state) => state.computers);
+  const [error, setError] = useState(false);
   const [enteredValues, setEnteredValues] = useState(initValues);
 
-  const updateValue = (field, value) => {
+  const updateValueHandler = (field, value) => {
     setEnteredValues((currValues) => {
       return { ...currValues, [field]: value };
     });
@@ -28,6 +28,7 @@ function ComputerForm(props) {
       price: enteredValues.price,
     };
 
+    // Check if the name is already in the store
     if (
       computers.some(
         (computer) =>
@@ -40,6 +41,7 @@ function ComputerForm(props) {
     }
 
     if (initValues.name) {
+      // Update the values
       dispatch(
         computersActions.updateComputer({
           identification: initValues.name,
@@ -53,6 +55,7 @@ function ComputerForm(props) {
         })
       );
     } else {
+      // Add new entry
       dispatch(computersActions.addComputer(enteredValues));
       dispatch(panelActions.addDevice(newDevice));
     }
@@ -75,7 +78,7 @@ function ComputerForm(props) {
           type: 'text',
           maxLength: '40',
           value: enteredValues.name,
-          onChange: (event) => updateValue('name', event.target.value),
+          onChange: (event) => updateValueHandler('name', event.target.value),
         }}
       />
 
@@ -87,7 +90,7 @@ function ComputerForm(props) {
           min: '1',
           max: '100',
           value: enteredValues.price,
-          onChange: (event) => updateValue('price', event.target.value),
+          onChange: (event) => updateValueHandler('price', event.target.value),
         }}
       />
 
@@ -98,7 +101,7 @@ function ComputerForm(props) {
           type: 'text',
           maxLength: '20',
           value: enteredValues.brand,
-          onChange: (event) => updateValue('brand', event.target.value),
+          onChange: (event) => updateValueHandler('brand', event.target.value),
         }}
       />
 
@@ -110,7 +113,8 @@ function ComputerForm(props) {
           min: '0',
           max: '99',
           value: enteredValues.antiquity,
-          onChange: (event) => updateValue('antiquity', event.target.value),
+          onChange: (event) =>
+            updateValueHandler('antiquity', event.target.value),
         }}
       />
 
@@ -121,7 +125,8 @@ function ComputerForm(props) {
           type: 'date',
           max: getDate(new Date()),
           value: enteredValues.revision,
-          onChange: (event) => updateValue('revision', event.target.value),
+          onChange: (event) =>
+            updateValueHandler('revision', event.target.value),
         }}
       />
 
@@ -132,7 +137,7 @@ function ComputerForm(props) {
           type: 'text',
           maxLength: '20',
           value: enteredValues.serial,
-          onChange: (event) => updateValue('serial', event.target.value),
+          onChange: (event) => updateValueHandler('serial', event.target.value),
         }}
       />
 
@@ -143,7 +148,8 @@ function ComputerForm(props) {
           maxLength: '150',
           rows: '3',
           value: enteredValues.description,
-          onChange: (event) => updateValue('description', event.target.value),
+          onChange: (event) =>
+            updateValueHandler('description', event.target.value),
         }}
         textarea
       />

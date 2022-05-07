@@ -1,8 +1,9 @@
-import { Fragment} from 'react';
+import { Fragment } from 'react';
 import { createPortal } from 'react-dom';
 
 import classes from './Modal.module.css';
 
+// Used when you need to put components directly into the modal
 function Modal(props) {
   const onCloseHandler = (event) => {
     if (event.currentTarget === event.target) {
@@ -21,8 +22,9 @@ function Modal(props) {
           {props.children}
         </div>
       </div>
-    </Fragment>
-  , document.getElementById('modal-overlay'));
+    </Fragment>,
+    document.getElementById('modal-overlay')
+  );
 }
 
 export default Modal;

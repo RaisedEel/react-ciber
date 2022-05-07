@@ -1,5 +1,6 @@
 import classes from './Card.module.css';
 
+// Give a card style to the component
 function Card(props) {
   return (
     <div

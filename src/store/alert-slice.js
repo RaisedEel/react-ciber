@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+// This slice handle the Alert component, just call setAlert to make it appear
 const alertSlice = createSlice({
   name: 'alert',
   initialState: {

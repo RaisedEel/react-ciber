@@ -16,9 +16,7 @@ function RentalItem(props) {
   } = useModal();
 
   const deleteRentalHandler = () => {
-    dispatch(
-      rentalsActions.removeRental(props.id)
-    );
+    dispatch(rentalsActions.removeRental(props.id));
   };
 
   return (

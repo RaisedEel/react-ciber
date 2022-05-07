@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+// Creates a state and functions to hide and show the Modals Components
 function useModal() {
   const [modal, setModal] = useState(false);
 

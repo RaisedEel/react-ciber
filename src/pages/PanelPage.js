@@ -2,7 +2,7 @@ import { Fragment, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import useModal from '../hooks/useModal';
 
-import DeviceList from '../components/devices/DevicesList';
+import DevicesList from '../components/devices/DevicesList';
 import MainContentWrapper from '../components/wrappers/MainContentWrapper';
 import Modal from '../components/ui/Modal';
 import DeviceRentResult from '../components/devices/DeviceRentResult';
@@ -15,6 +15,8 @@ function PanelPage() {
   const { state: showResult, show: openResult, hide: closeResult } = useModal();
   const [rentResult, setRentResult] = useState({});
 
+  // Give the results to the form, each DeviceItem has a copy with their values bound
+  // (The bind can be find on DevicesList)
   const showResultHandler = (results) => {
     setRentResult(getFinalResults(results));
     openResult();
@@ -33,7 +35,7 @@ function PanelPage() {
         </Modal>
       )}
       <MainContentWrapper title='PANEL DE CONTROL'>
-        <DeviceList devices={loadedDevices} onRentalEnd={showResultHandler} />
+        <DevicesList devices={loadedDevices} onRentalEnd={showResultHandler} />
       </MainContentWrapper>
     </Fragment>
   );

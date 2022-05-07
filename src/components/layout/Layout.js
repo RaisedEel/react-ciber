@@ -1,9 +1,10 @@
 import { useState } from 'react';
 
 import MainHeader from './MainHeader';
-import classes from './Layout.module.css';
 import MainMenu from './MainMenu';
+import classes from './Layout.module.css';
 
+// Each page has exactly the same layout and menu
 function Layout(props) {
   const [hideMenu, setHideMenu] = useState(true);
 
@@ -21,9 +22,7 @@ function Layout(props) {
           </button>
         </div>
         {!hideMenu && <MainMenu />}
-        <main className={classes.main}>
-          {props.children}
-        </main>
+        <main className={classes.main}>{props.children}</main>
       </div>
     </div>
   );

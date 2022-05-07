@@ -1,5 +1,6 @@
 import classes from './MainContentWrapper.module.css';
 
+// Give a title and margin to the main section
 function MainContentWrapper(props) {
   return (
     <div className={classes.wrapper}>

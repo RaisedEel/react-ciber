@@ -1,5 +1,6 @@
+// In case the user write an invalid url
 function NotFound() {
-  return <div>Página No Encontrada...</div>;
+  return <h1>Página No Encontrada...</h1>;
 }
 
 export default NotFound;

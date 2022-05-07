@@ -1,6 +1,7 @@
 import Modal from './Modal';
 import classes from './Alert.module.css';
 
+// Component used when you need a confirm alert, can pass a confirm function using props
 function Confirm(props) {
   return (
     <Modal title={props.title} onClose={props.onCancel}>

@@ -16,7 +16,11 @@ const panelSlice = createSlice({
       state.devices = action.payload;
     },
     addDevice(state, action) {
-      state.devices.unshift({ ...action.payload, initialTime: 0, rentedHours: 0 });
+      state.devices.unshift({
+        ...action.payload,
+        initialTime: 0,
+        rentedHours: 0,
+      });
     },
     updateDevice(state, action) {
       const indexDevice = state.devices.findIndex(

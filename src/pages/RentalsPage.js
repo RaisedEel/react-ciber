@@ -8,6 +8,7 @@ import getDate from '../helpers/getDate';
 
 function RentalsPage() {
   const { rentals } = useSelector((state) => state.rentals);
+  // Get the current Date
   const [dateToSearch, setDateToSearch] = useState(getDate(new Date()));
 
   const searchRentalsHandler = (date) => {

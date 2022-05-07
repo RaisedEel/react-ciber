@@ -4,6 +4,7 @@ import { alertActions } from '../../../store/alert-slice';
 import { panelActions } from '../../../store/panel-slice';
 import classes from './DeviceInput.module.css';
 
+// Created to separate the logic of the DeviceItem
 function DeviceInput(props) {
   const { rentedHours, rentTime } = props;
   const dispatch = useDispatch();
@@ -28,6 +29,7 @@ function DeviceInput(props) {
         })
       );
     } else {
+      // In case of an invalid value shows an alert, check alert-slice
       dispatch(
         alertActions.setAlert({
           title: 'Aviso',
@@ -41,7 +43,8 @@ function DeviceInput(props) {
 
   return (
     <div className={classes.input}>
-      <span className={classes.label}>Horas a Rentar:</span><span className={classes.value}>{rentedHours}</span>
+      <span className={classes.label}>Horas a Rentar:</span>
+      <span className={classes.value}>{rentedHours}</span>
       <span className={classes['input-actions']}>
         <button onClick={addHoursHandler}>+0.5</button>
         <button onClick={removeHoursHandler}>-0.5</button>
