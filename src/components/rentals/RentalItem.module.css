@@ -1,37 +1,38 @@
 .rental {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+	padding: 0.8rem;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
 .name {
-  width: 30%;
-  font-weight: 700;
+	width: 30%;
+	font-weight: 700;
 }
 
 .data,
 .result {
-  width: 15%;
-  text-align: center;
+	width: 15%;
+	text-align: center;
 }
 
 .data {
-  border-left: 2px solid lightgray;
+	border-left: 2px solid lightgray;
 }
 
 .result {
-  background-color: #187bcd;
-  color: whitesmoke;
-  border-radius: 5px;
+	background-color: #187bcd;
+	color: whitesmoke;
+	border-radius: 5px;
 }
 
 .actions {
-  width: 7%;
-  display: flex;
-  justify-content: center;
+	width: 7%;
+	display: flex;
+	justify-content: center;
 }
 
 .actions button {
-  width: 70%;
-  font-size: 1.3rem;
+	width: 70%;
+	font-size: 1.3rem;
 }

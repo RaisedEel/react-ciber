@@ -1,12 +1,14 @@
 .wrapper {
-  height: 100%;
-  overflow: auto;
+	height: 100%;
+	overflow: auto;
 }
 
 .title {
-  margin: 0.5vh 0;
+	margin: 1rem 0;
+	display: flex;
+	justify-content: center;
 }
 
 .wrapper hr {
-  margin-bottom: 1vh;
+	margin-bottom: 1vh;
 }

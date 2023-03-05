@@ -1,24 +1,22 @@
 .inputBox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 3vh 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 3vh 0;
 }
 
 .inputBox label {
-  width: 30%;
-  margin-right: 5px;
-  font-weight: 700;
-  text-align: right;
+	width: 30%;
+	margin-right: 5px;
+	font-weight: 700;
+	text-align: right;
 }
 
 .inputBox input {
-  width: 45%;
-  font-size: 0.9rem;
+	width: 45%;
 }
 
 .inputBox textarea {
-  width: 45%;
-  font-size: 0.9rem;
-  resize: none;
+	width: 45%;
+	resize: none;
 }

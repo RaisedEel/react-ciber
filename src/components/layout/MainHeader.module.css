@@ -1,22 +1,24 @@
 .header {
-  height: 10%;
-  display: flex;
-  background-color: #ba181b;
+	height: 10%;
+	display: flex;
+	background-color: #e03131;
 }
 
 .title {
-  width: 70%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  font-weight: 700;
+	color: #eee;
+	width: 70%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3.2rem;
+	font-weight: 700;
+	letter-spacing: -0.5px;
 }
 
 .image {
-  width: 30%;
-  background-image: url(../../assets/head.jpg);
-  background-size: cover;
-  background-position: right;
-  background-repeat: no-repeat;
+	width: 30%;
+	background-image: url(../../assets/head.jpg);
+	background-size: cover;
+	background-position: right;
+	background-repeat: no-repeat;
 }

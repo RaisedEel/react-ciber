@@ -1,88 +1,94 @@
 .device {
-  width: 400px;
-  display: flex;
-  align-items: center;
+	width: 40rem;
+	display: flex;
+	align-items: center;
+	border-radius: 15px;
+	border: none;
 }
 
 .device h4 {
-  margin-bottom: 2vh;
+	margin-bottom: 2vh;
+}
+
+.title {
+	margin-bottom: 0.8rem;
 }
 
 .badge {
-  margin: 5px;
-  padding: 5px;
-  background-color: lightgray;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
+	margin: 5px;
+	padding: 5px;
+	background-color: lightgray;
+	border-radius: 5px;
 }
 
 .badge img {
-  height: 100px;
+	height: 100px;
 }
 
 .badge p {
-  font-weight: 700;
-  text-align: center;
-}
-
-.red {
-  color: #ba181b;
-}
-
-.green {
-  color: green;
-}
-
-.yellow {
-  color: orange;
-}
-
-.blue {
-  color: #187bcd;
-}
-
-.gray {
-  color: darkgray;
+	font-weight: 700;
+	text-align: center;
 }
 
 .content {
-  flex: 1;
-  margin: 5px;
+	flex: 1;
+	margin: 5px;
 }
 
 .actions {
-  display: flex;
-  justify-content: space-evenly;
+	margin: 1rem;
+	display: flex;
+	justify-content: space-evenly;
+	gap: 5px;
 }
 
 .actions button {
-  height: 40px;
-  margin: 5px;
-  padding: 5px 25px;
-  font-weight: 700;
+	min-width: 50%;
+	padding: 1.5rem 2.5rem;
+	font-weight: 700;
 }
 
 .rent-info {
-  text-align: center;
+	text-align: center;
 }
 
 .info {
-  display: flex;
-}
-
-.info strong {
-  flex: 1;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0.8rem;
 }
 
 .price {
-  padding: 0 5%;
-  background-color: lightgray;
-  font-weight: 700;
-  border-radius: 5px;
+	padding: 0 1rem;
+	background-color: lightgray;
+	font-weight: 700;
+	border-radius: 5px;
 }
 
 .timer {
-  font-size: 1.8rem;
-  font-weight: 700;
-  width: 100%;
+	font-size: 2.4rem;
+	font-weight: 700;
+	width: 100%;
+}
+
+/* COLORS FOR THE TIMERS */
+
+.red {
+	color: #ba181b;
+}
+
+.green {
+	color: green;
+}
+
+.yellow {
+	color: orange;
+}
+
+.blue {
+	color: #187bcd;
+}
+
+.gray {
+	color: darkgray;
 }
