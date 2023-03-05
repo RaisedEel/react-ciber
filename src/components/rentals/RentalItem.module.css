@@ -21,6 +21,7 @@
 }
 
 .result {
+	padding: 0.8rem 0;
 	background-color: #187bcd;
 	color: whitesmoke;
 	border-radius: 5px;
@@ -33,6 +34,11 @@
 }
 
 .actions button {
-	width: 70%;
-	font-size: 1.3rem;
+	width: 60%;
+	padding: 0.4rem;
+}
+
+.actions button svg {
+	width: 2rem;
+	height: 2rem;
 }

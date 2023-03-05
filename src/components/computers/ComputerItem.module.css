@@ -40,6 +40,12 @@
 }
 
 .actions button {
-	width: 70%;
-	font-size: 1.25rem;
+	width: 60%;
+	margin: 0.4rem;
+	padding: 0.4rem;
+}
+
+.actions button svg {
+	width: 2.4rem;
+	height: 2.4rem;
 }

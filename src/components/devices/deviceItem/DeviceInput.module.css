@@ -25,4 +25,12 @@
 	padding: 2px;
 	margin-left: 5px;
 	font-weight: 700;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.input-actions button svg {
+	width: 2.4rem;
+	height: 2.4rem;
 }

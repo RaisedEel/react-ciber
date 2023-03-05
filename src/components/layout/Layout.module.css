@@ -24,7 +24,7 @@
 }
 
 .ctn-btn {
-	width: 1.25rem;
+	width: 2rem;
 	margin-bottom: 0.5%;
 }
 
@@ -38,6 +38,11 @@
 
 .rotate {
 	transform: rotate(180deg);
+}
+
+.arrow-icon {
+	width: 1.6rem;
+	height: 1.6rem;
 }
 
 .btn-menu:hover {
