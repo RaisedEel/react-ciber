@@ -1,6 +1,5 @@
 .wrapper {
-	height: 100%;
-	overflow: auto;
+	overflow-y: auto;
 }
 
 .title {

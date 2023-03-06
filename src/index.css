@@ -40,6 +40,7 @@ button {
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
+	transition: all 0.3s;
 }
 
 button.red-button {
@@ -47,12 +48,13 @@ button.red-button {
 }
 
 button:hover {
-	filter: brightness(85%);
+	background-color: blue;
 }
 
-.header {
+.heading {
 	font-weight: 700;
 	color: #333;
+	letter-spacing: -0.5px;
 }
 
 .error {

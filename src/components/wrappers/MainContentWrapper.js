@@ -4,7 +4,7 @@ import classes from './MainContentWrapper.module.css';
 function MainContentWrapper(props) {
 	return (
 		<div className={classes.wrapper}>
-			<h2 className={`${classes.title} header`}>{props.title}</h2>
+			<h2 className={`${classes.title} heading`}>{props.title}</h2>
 			<hr />
 			{props.children}
 		</div>

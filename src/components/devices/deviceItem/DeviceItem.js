@@ -86,7 +86,7 @@ function DeviceItem(props) {
 					{!!initialTime && <p className={classes.red}>EN USO</p>}
 				</div>
 				<div className={classes.content}>
-					<h3 className={`${classes.title} header`}>{props.name}</h3>
+					<h3 className={`${classes.title} heading`}>{props.name}</h3>
 
 					<DeviceInput
 						name={props.name}

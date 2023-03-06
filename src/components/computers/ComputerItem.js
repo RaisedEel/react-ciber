@@ -35,7 +35,7 @@ function ComputerItem(props) {
 			<li>
 				<Card className={classes.computer}>
 					<div className={classes.content}>
-						<h3>{props.name}</h3>
+						<h3 className='heading'>{props.name}</h3>
 						<hr />
 						<div className={classes.info}>
 							<p>

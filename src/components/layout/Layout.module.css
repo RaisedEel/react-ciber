@@ -2,42 +2,36 @@
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	gap: 1rem;
 }
 
-.content {
-	height: 90%;
-	margin-top: 0.5%;
-	display: flex;
-	justify-content: space-between;
-	overflow: auto;
+.container {
+	flex: 1;
+	position: relative;
+	overflow-y: auto;
 }
 
 .main {
-	width: 100%;
-	margin: 0 1%;
-	overflow: hidden;
-	background-color: whitesmoke;
+	height: 100%;
+	max-width: 120rem;
+	margin: 0 auto 0;
+	background-color: #eee;
 	border-radius: 8px 8px 0 0;
-	padding: 0.25%;
 	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
-}
-
-.ctn-btn {
-	width: 2rem;
-	margin-bottom: 0.5%;
+	overflow-y: auto;
 }
 
 .btn-menu {
-	width: 100%;
-	height: 100%;
+	position: absolute;
+	height: 99%;
+	width: 2rem;
+	z-index: 10;
 	background-color: #a4161a;
 	color: whitesmoke;
 	border: none;
-}
-
-.rotate {
-	transform: rotate(180deg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .arrow-icon {
@@ -48,4 +42,8 @@
 .btn-menu:hover {
 	cursor: pointer;
 	background-color: #660708;
+}
+
+.rotate {
+	transform: rotate(180deg);
 }

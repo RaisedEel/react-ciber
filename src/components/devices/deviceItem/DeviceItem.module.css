@@ -1,13 +1,9 @@
 .device {
-	width: 40rem;
+	width: 38rem;
 	display: flex;
 	align-items: center;
 	border-radius: 15px;
 	border: none;
-}
-
-.device h4 {
-	margin-bottom: 2vh;
 }
 
 .title {

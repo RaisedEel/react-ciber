@@ -7,22 +7,22 @@ import SearchRental from '../components/rentals/SearchRental';
 import getDate from '../helpers/getDate';
 
 function RentalsPage() {
-  const { rentals } = useSelector((state) => state.rentals);
-  // Get the current Date
-  const [dateToSearch, setDateToSearch] = useState(getDate(new Date()));
+	const { rentals } = useSelector((state) => state.rentals);
+	// Get the current Date
+	const [dateToSearch, setDateToSearch] = useState(getDate(new Date()));
 
-  const searchRentalsHandler = (date) => {
-    setDateToSearch(date);
-  };
+	const searchRentalsHandler = (date) => {
+		setDateToSearch(date);
+	};
 
-  return (
-    <MainContentWrapper title='RENTAS ANTERIORES'>
-      <SearchRental onSubmit={searchRentalsHandler} />
-      <RentalsList
-        rentals={rentals.filter((rental) => rental.date === dateToSearch)}
-      />
-    </MainContentWrapper>
-  );
+	return (
+		<MainContentWrapper title='RENTAS ANTERIORES'>
+			<SearchRental onSubmit={searchRentalsHandler} />
+			<RentalsList
+				rentals={rentals.filter((rental) => rental.date === dateToSearch)}
+			/>
+		</MainContentWrapper>
+	);
 }
 
 export default RentalsPage;

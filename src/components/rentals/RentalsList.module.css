@@ -1,24 +1,24 @@
 .list {
-  list-style: none;
+	list-style: none;
 }
 
 .header {
-  margin: 9px;
-  display: flex;
-  justify-content: space-evenly;
+	margin: 0.8rem;
+	display: flex;
+	justify-content: space-evenly;
 }
 
 .header .name {
-  width: 30%;
-  text-align: center;
+	width: 30%;
+	text-align: center;
 }
 
 .header span {
-  width: 15%;
-  padding-left: 2px;
-  text-align: center;
+	width: 15%;
+	padding-left: 2px;
+	text-align: center;
 }
 
 .header .last {
-  width: 7%;
+	width: 7%;
 }

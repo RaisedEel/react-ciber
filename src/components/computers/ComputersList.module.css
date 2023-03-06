@@ -1,9 +1,9 @@
 .list {
-  list-style: none;
+	list-style: none;
 }
 
 .button {
-  margin-left: 8px;
-  padding: 1% 2%;
-  font-weight: 700;
+	margin: 2.4rem 0 2.4rem 0.8rem;
+	padding: 1% 2%;
+	font-weight: 700;
 }
