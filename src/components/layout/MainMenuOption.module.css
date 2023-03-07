@@ -1,26 +1,27 @@
 .opt-menu {
-  height: 28%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  border-radius: 10px;
-  text-decoration: none;
-  cursor: pointer;
+	height: 28%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	border-radius: 10px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.3s;
 }
 
 .opt-menu:hover {
-  background-color: #660708;
+	background-color: #464083;
 }
 
 .opt-menu img {
-  max-width: 85%;
-  max-height: 85%;
-  margin: 0 auto;
+	max-width: 85%;
+	max-height: 85%;
+	margin: 0 auto;
 }
 
 .opt-menu h5 {
-  height: 15%;
-  text-align: center;
+	height: 15%;
+	text-align: center;
 }

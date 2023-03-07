@@ -7,15 +7,19 @@
 	flex-direction: column;
 	justify-content: space-evenly;
 	border-radius: 0px 10px 10px 0px;
-	background-color: #e03131;
+	background-color: #645cbb;
 }
 
 .title {
+	padding-left: 1rem;
 	height: 5%;
 	color: #eee;
+	display: flex;
+	align-items: center;
 }
 
 .back {
+	padding-left: 1rem;
 	height: 10%;
 	display: flex;
 	align-items: center;

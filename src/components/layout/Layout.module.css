@@ -15,7 +15,7 @@
 	height: 100%;
 	max-width: 120rem;
 	margin: 0 auto 0;
-	background-color: #eee;
+	background-color: #f0eff8;
 	border-radius: 8px 8px 0 0;
 	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
 	overflow-y: auto;
@@ -26,12 +26,13 @@
 	height: 99%;
 	width: 2rem;
 	z-index: 10;
-	background-color: #a4161a;
-	color: whitesmoke;
+	background-color: #504a96;
+	color: #fff;
 	border: none;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: all 0.3s;
 }
 
 .arrow-icon {
@@ -41,7 +42,7 @@
 
 .btn-menu:hover {
 	cursor: pointer;
-	background-color: #660708;
+	background-color: #464083;
 }
 
 .rotate {

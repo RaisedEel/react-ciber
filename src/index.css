@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 * {
 	margin: 0%;
 	padding: 0%;
@@ -9,20 +11,23 @@ html {
 }
 
 body {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Inter', sans-serif;
 	font-size: 1.6rem;
 	font-weight: 400;
 	line-height: 1;
 	color: #555;
-	background-color: dimgray;
+	background-color: #777;
 }
 
-a {
-	color: whitesmoke;
+a:link,
+a:visited {
+	color: #fff;
+	transition: all 0.3s;
 }
 
-a:hover {
-	color: #187bcd !important;
+a:hover,
+a:active {
+	text-decoration: none;
 }
 
 input,
@@ -32,37 +37,45 @@ select {
 	font-family: inherit;
 	font-size: inherit;
 	color: inherit;
+	border-radius: 7px;
+	border: 1px solid;
+	padding: 0.4rem;
 }
 
 button {
-	color: #eee;
-	background-color: #187bcd;
+	color: #fff;
+	background-color: #a084dc;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
 	transition: all 0.3s;
 }
 
-button.red-button {
-	background-color: #e03131;
+button:hover {
+	background-color: #806ab0;
 }
 
-button:hover {
-	background-color: blue;
+button.red-button {
+	background-color: #d995d0;
+}
+
+button.red-button:hover {
+	background-color: #cc6fbf;
 }
 
 .heading {
 	font-weight: 700;
-	color: #333;
+	color: #444;
 	letter-spacing: -0.5px;
 }
 
 .error {
-	color: whitesmoke;
-	background-color: #e03131;
+	font-size: 2rem;
+	color: #fff;
+	background-color: #d995d0;
 	text-align: center;
-	padding: 5px;
-	margin: 2vh auto;
+	padding: 0.4rem;
+	margin: 2rem auto;
 	border-radius: 5px;
 	width: 95%;
 }

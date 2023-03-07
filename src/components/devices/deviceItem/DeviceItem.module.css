@@ -11,14 +11,14 @@
 }
 
 .badge {
-	margin: 5px;
-	padding: 5px;
-	background-color: lightgray;
+	margin: 0.4rem;
+	padding: 0.4rem;
+	background-color: #ddd;
 	border-radius: 5px;
 }
 
 .badge img {
-	height: 100px;
+	height: 10rem;
 }
 
 .badge p {
@@ -28,14 +28,14 @@
 
 .content {
 	flex: 1;
-	margin: 5px;
+	margin: 0.4rem;
 }
 
 .actions {
 	margin: 1rem;
 	display: flex;
 	justify-content: space-evenly;
-	gap: 5px;
+	gap: 0.4rem;
 }
 
 .actions button {
