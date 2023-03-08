@@ -1,22 +1,32 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 import MainHeader from './MainHeader';
 import MainMenu from './MainMenu';
 import classes from './Layout.module.css';
+import useOutsideAlerter from '../../hooks/useOutsideAlerter';
 
-// Each page has exactly the same layout and menu
+// Each page has the same exact layout and menu
 function Layout(props) {
 	const [hideMenu, setHideMenu] = useState(true);
+	const menuRef = useRef(null);
 
 	const controlMenuHandler = () => {
 		setHideMenu((prevState) => !prevState);
 	};
 
+	useOutsideAlerter(menuRef, controlMenuHandler);
+
 	return (
 		<div className={classes.layout}>
 			<MainHeader />
 			<div className={classes.container}>
-				<button className={classes['btn-menu']} onClick={controlMenuHandler}>
+				<button
+					className={classes['btn-menu']}
+					onMouseDown={(e) => {
+						e.stopPropagation();
+						controlMenuHandler();
+					}}
+				>
 					<p className={hideMenu ? '' : classes.rotate}>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
@@ -34,7 +44,7 @@ function Layout(props) {
 						</svg>
 					</p>
 				</button>
-				{!hideMenu && <MainMenu />}
+				{!hideMenu && <MainMenu ref={menuRef} />}
 				<main className={classes.main}>{props.children}</main>
 			</div>
 		</div>

@@ -5,10 +5,11 @@ import computadoras from '../../assets/computadoras.png';
 import rentas from '../../assets/rentas.png';
 import MainMenuOption from './MainMenuOption';
 import classes from './MainMenu.module.css';
+import { forwardRef } from 'react';
 
-function MainMenu(props) {
+function MainMenu(props, ref) {
 	return (
-		<nav className={classes.menu}>
+		<nav ref={ref} className={classes.menu}>
 			<h3 className={classes.title}>Menú</h3>
 			<NavLink
 				className={({ isActive }) => (isActive ? classes.hide : classes.back)}
@@ -27,4 +28,4 @@ function MainMenu(props) {
 	);
 }
 
-export default MainMenu;
+export default forwardRef(MainMenu);

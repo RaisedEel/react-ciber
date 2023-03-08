@@ -5,6 +5,7 @@
 
 .label {
 	flex: 1;
+	align-self: center;
 }
 
 .value {
@@ -17,13 +18,14 @@
 }
 
 .input-actions {
+	margin-left: 0.5rem;
 	display: flex;
+	gap: 0.5rem;
 }
 
 .input-actions button {
 	width: 50%;
-	padding: 2px;
-	margin-left: 5px;
+	padding: 0.2rem;
 	font-weight: 700;
 	display: flex;
 	justify-content: center;
