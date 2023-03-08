@@ -1,0 +1,13 @@
+.animation {
+	animation: blink 1.2s steps(2, jump-none) infinite;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}

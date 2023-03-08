@@ -2,12 +2,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 3vh 0;
+	margin: 1.5rem 0;
 }
 
 .inputBox label {
 	width: 30%;
-	margin-right: 5px;
+	margin-right: 0.5rem;
 	font-weight: 700;
 	text-align: right;
 }

@@ -141,7 +141,7 @@ function DeviceItem(props) {
 									: classes.gray
 							}`}
 						>
-							<DeviceTimer time={rentTime} counter />
+							<DeviceTimer time={rentTime} counting={!!initialTime} /> Hrs
 						</p>
 					</div>
 				</div>
