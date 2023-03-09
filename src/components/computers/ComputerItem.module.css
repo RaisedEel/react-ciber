@@ -1,31 +1,29 @@
 .computer {
-	display: flex;
+	display: grid;
+	grid-template-columns: 93fr 7fr;
 	padding: 0.8rem;
 	margin-bottom: 1.2rem;
 }
 
 .content {
-	flex: 1;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
+	display: grid;
+	grid-template-columns: 40fr 60fr;
+	column-gap: 1rem;
 	line-height: 1.6;
 }
 
 .content h3,
 .content hr {
-	width: 100%;
+	grid-column: 1 / -1;
 }
 
 .info {
-	width: 30%;
 	padding: 5px 2%;
 	background-color: lightgray;
 	border-radius: 7px;
 }
 
 .extras {
-	width: 60%;
 	padding: 0.4rem 2%;
 }
 
@@ -34,7 +32,6 @@
 }
 
 .actions {
-	width: 7%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -50,4 +47,25 @@
 .actions button svg {
 	width: 2.4rem;
 	height: 2.4rem;
+}
+
+@media (max-width: 42.5em) {
+	.computer {
+		grid-template-columns: 1fr;
+	}
+
+	.actions {
+		flex-direction: row;
+		padding: 1.2rem 0;
+	}
+
+	.actions button {
+		width: 40%;
+	}
+}
+
+@media (max-width: 27em) {
+	.content {
+		grid-template-columns: 1fr;
+	}
 }

@@ -6,17 +6,24 @@
 }
 
 .inputBox label {
-	width: 30%;
+	width: 40%;
 	margin-right: 0.5rem;
 	font-weight: 700;
 	text-align: right;
 }
 
 .inputBox input {
-	width: 45%;
+	width: 50%;
 }
 
 .inputBox textarea {
-	width: 45%;
+	width: 50%;
 	resize: none;
+}
+
+@media (max-width: 42.5em) {
+	.inputBox input,
+	.inputBox textarea {
+		width: 55%;
+	}
 }

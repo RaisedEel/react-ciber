@@ -8,160 +8,160 @@ import getDate from '../../../helpers/getDate';
 import classes from './ComputerForm.module.css';
 
 function ComputerForm(props) {
-  const { initValues } = props;
-  const dispatch = useDispatch();
-  const { computers } = useSelector((state) => state.computers);
-  const [error, setError] = useState(false);
-  const [enteredValues, setEnteredValues] = useState(initValues);
+	const { initValues } = props;
+	const dispatch = useDispatch();
+	const { computers } = useSelector((state) => state.computers);
+	const [error, setError] = useState(false);
+	const [enteredValues, setEnteredValues] = useState(initValues);
 
-  const updateValueHandler = (field, value) => {
-    setEnteredValues((currValues) => {
-      return { ...currValues, [field]: value };
-    });
-  };
+	const updateValueHandler = (field, value) => {
+		setEnteredValues((currValues) => {
+			return { ...currValues, [field]: value };
+		});
+	};
 
-  const onSubmitHandler = (event) => {
-    event.preventDefault();
+	const onSubmitHandler = (event) => {
+		event.preventDefault();
 
-    const newDevice = {
-      name: enteredValues.name,
-      price: enteredValues.price,
-    };
+		const newDevice = {
+			name: enteredValues.name,
+			price: enteredValues.price,
+		};
 
-    // Check if the name is already in the store
-    if (
-      computers.some(
-        (computer) =>
-          computer.name === enteredValues.name &&
-          initValues.name !== enteredValues.name
-      )
-    ) {
-      setError(true);
-      return;
-    }
+		// Check if the name is already in the store
+		if (
+			computers.some(
+				(computer) =>
+					computer.name === enteredValues.name &&
+					initValues.name !== enteredValues.name
+			)
+		) {
+			setError(true);
+			return;
+		}
 
-    if (initValues.name) {
-      // Update the values
-      dispatch(
-        computersActions.updateComputer({
-          identification: initValues.name,
-          updatedValues: enteredValues,
-        })
-      );
-      dispatch(
-        panelActions.updateDevice({
-          identification: initValues.name,
-          updatedValues: newDevice,
-        })
-      );
-    } else {
-      // Add new entry
-      dispatch(computersActions.addComputer(enteredValues));
-      dispatch(panelActions.addDevice(newDevice));
-    }
+		if (initValues.name) {
+			// Update the values
+			dispatch(
+				computersActions.updateComputer({
+					identification: initValues.name,
+					updatedValues: enteredValues,
+				})
+			);
+			dispatch(
+				panelActions.updateDevice({
+					identification: initValues.name,
+					updatedValues: newDevice,
+				})
+			);
+		} else {
+			// Add new entry
+			dispatch(computersActions.addComputer(enteredValues));
+			dispatch(panelActions.addDevice(newDevice));
+		}
 
-    props.onClose();
-  };
+		props.onClose();
+	};
 
-  return (
-    <form onSubmit={onSubmitHandler}>
-      {error && (
-        <p className='error'>
-          Se encontró un elemento con este nombre. Ingrese un nombre único.
-        </p>
-      )}
+	return (
+		<form onSubmit={onSubmitHandler}>
+			{error && (
+				<p className='error'>
+					Se encontró un elemento con este nombre. Ingrese un nombre único.
+				</p>
+			)}
 
-      <InputBox
-        id='name'
-        label='Nombre Identificador: '
-        configuration={{
-          type: 'text',
-          maxLength: '40',
-          value: enteredValues.name,
-          onChange: (event) => updateValueHandler('name', event.target.value),
-        }}
-      />
+			<InputBox
+				id='name'
+				label='Identificador: '
+				configuration={{
+					type: 'text',
+					maxLength: '40',
+					value: enteredValues.name,
+					onChange: (event) => updateValueHandler('name', event.target.value),
+				}}
+			/>
 
-      <InputBox
-        id='price'
-        label='Precio por Hr: $ '
-        configuration={{
-          type: 'number',
-          min: '1',
-          max: '100',
-          value: enteredValues.price,
-          onChange: (event) => updateValueHandler('price', event.target.value),
-        }}
-      />
+			<InputBox
+				id='price'
+				label='Precio por Hr: $ '
+				configuration={{
+					type: 'number',
+					min: '1',
+					max: '100',
+					value: enteredValues.price,
+					onChange: (event) => updateValueHandler('price', event.target.value),
+				}}
+			/>
 
-      <InputBox
-        id='brand'
-        label='Marca: '
-        configuration={{
-          type: 'text',
-          maxLength: '20',
-          value: enteredValues.brand,
-          onChange: (event) => updateValueHandler('brand', event.target.value),
-        }}
-      />
+			<InputBox
+				id='brand'
+				label='Marca: '
+				configuration={{
+					type: 'text',
+					maxLength: '20',
+					value: enteredValues.brand,
+					onChange: (event) => updateValueHandler('brand', event.target.value),
+				}}
+			/>
 
-      <InputBox
-        id='antiquity'
-        label='Antigüedad: '
-        configuration={{
-          type: 'number',
-          min: '0',
-          max: '99',
-          value: enteredValues.antiquity,
-          onChange: (event) =>
-            updateValueHandler('antiquity', event.target.value),
-        }}
-      />
+			<InputBox
+				id='antiquity'
+				label='Antigüedad: '
+				configuration={{
+					type: 'number',
+					min: '0',
+					max: '99',
+					value: enteredValues.antiquity,
+					onChange: (event) =>
+						updateValueHandler('antiquity', event.target.value),
+				}}
+			/>
 
-      <InputBox
-        id='revision'
-        label='Fecha del Último Chequeo: '
-        configuration={{
-          type: 'date',
-          max: getDate(new Date()),
-          value: enteredValues.revision,
-          onChange: (event) =>
-            updateValueHandler('revision', event.target.value),
-        }}
-      />
+			<InputBox
+				id='revision'
+				label='Fecha del Último Chequeo: '
+				configuration={{
+					type: 'date',
+					max: getDate(new Date()),
+					value: enteredValues.revision,
+					onChange: (event) =>
+						updateValueHandler('revision', event.target.value),
+				}}
+			/>
 
-      <InputBox
-        id='serial'
-        label='Serial de la Computadora: '
-        configuration={{
-          type: 'text',
-          maxLength: '20',
-          value: enteredValues.serial,
-          onChange: (event) => updateValueHandler('serial', event.target.value),
-        }}
-      />
+			<InputBox
+				id='serial'
+				label='Serial de la Computadora: '
+				configuration={{
+					type: 'text',
+					maxLength: '20',
+					value: enteredValues.serial,
+					onChange: (event) => updateValueHandler('serial', event.target.value),
+				}}
+			/>
 
-      <InputBox
-        id='description'
-        label='Descripción General: '
-        configuration={{
-          maxLength: '150',
-          rows: '3',
-          value: enteredValues.description,
-          onChange: (event) =>
-            updateValueHandler('description', event.target.value),
-        }}
-        textarea
-      />
+			<InputBox
+				id='description'
+				label='Descripción General: '
+				configuration={{
+					maxLength: '150',
+					rows: '3',
+					value: enteredValues.description,
+					onChange: (event) =>
+						updateValueHandler('description', event.target.value),
+				}}
+				textarea
+			/>
 
-      <div className={classes.actions}>
-        <button type='button' className='red-button' onClick={props.onClose}>
-          Cancelar
-        </button>
-        <button>Subir Datos</button>
-      </div>
-    </form>
-  );
+			<div className={classes.actions}>
+				<button type='button' className='red-button' onClick={props.onClose}>
+					Cancelar
+				</button>
+				<button>Subir Datos</button>
+			</div>
+		</form>
+	);
 }
 
 export default ComputerForm;

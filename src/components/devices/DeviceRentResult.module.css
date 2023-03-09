@@ -1,11 +1,16 @@
 .results p {
+	text-align: right;
 	font-size: 1.8rem;
 	line-height: 1.8;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 70%;
+	width: 80%;
 	margin: 1.5rem auto;
+}
+
+.results p strong {
+	text-align: left;
 }
 
 .total {
@@ -21,6 +26,6 @@
 }
 
 .action button {
-	padding: 2% 3%;
+	padding: 1.2rem 2.4rem;
 	font-weight: 700;
 }

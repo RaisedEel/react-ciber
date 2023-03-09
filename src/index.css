@@ -44,6 +44,7 @@ select {
 
 button {
 	color: #fff;
+	padding: 2.4rem 0;
 	background-color: #a084dc;
 	border: none;
 	border-radius: 5px;
@@ -78,6 +79,18 @@ button.red-button:hover {
 	margin: 2rem auto;
 	border-radius: 5px;
 	width: 95%;
+}
+
+@media (max-width: 78em) {
+	html {
+		font-size: 56.25%;
+	}
+}
+
+@media (max-width: 48em) {
+	html {
+		font-size: 50%;
+	}
 }
 
 /* 

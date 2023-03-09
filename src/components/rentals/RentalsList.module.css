@@ -22,3 +22,9 @@
 .header .last {
 	width: 7%;
 }
+
+@media (max-width: 27em) {
+	.header {
+		font-size: 1.4rem;
+	}
+}

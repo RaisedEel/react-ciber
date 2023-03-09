@@ -16,13 +16,19 @@
 .modal {
 	width: 70%;
 	max-height: 80vh;
-	padding: 1%;
+	padding: 1.6rem;
 	border: 1px solid #888;
-	border-radius: 2vh;
+	border-radius: 15px;
 	overflow: auto;
 	background-color: white;
 }
 
 .line {
 	margin: 1vh 0;
+}
+
+@media (max-width: 42.5em) {
+	.modal {
+		width: 85%;
+	}
 }

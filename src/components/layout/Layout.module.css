@@ -48,3 +48,10 @@
 .rotate {
 	transform: rotate(180deg);
 }
+
+@media (max-width: 68em) {
+	.main {
+		margin-left: 2.4rem;
+		margin-right: 2.4rem;
+	}
+}

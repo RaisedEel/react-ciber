@@ -9,6 +9,9 @@
 .name {
 	width: 30%;
 	font-weight: 700;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 .data,
@@ -42,4 +45,22 @@
 .actions button svg {
 	width: 2rem;
 	height: 2rem;
+}
+
+@media (max-width: 42.5em) {
+	.actions button {
+		width: 100%;
+	}
+}
+
+@media (max-width: 27em) {
+	.rental {
+		padding: 0.8rem 0.4rem;
+		font-size: 1.5rem;
+	}
+
+	.actions button svg {
+		width: 1.6rem;
+		height: 1.6rem;
+	}
 }

@@ -7,7 +7,11 @@
 }
 
 .title {
+	width: 23rem;
 	margin-bottom: 0.8rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 .badge {
@@ -32,15 +36,15 @@
 }
 
 .actions {
-	margin: 1rem;
+	margin: 0.8rem;
 	display: flex;
 	justify-content: space-evenly;
 	gap: 0.4rem;
 }
 
 .actions button {
-	min-width: 50%;
-	padding: 1.5rem 2.5rem;
+	min-width: 45%;
+	padding: 1.2rem 1.6rem;
 	font-weight: 700;
 }
 
@@ -51,11 +55,12 @@
 .info {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	margin-bottom: 0.8rem;
 }
 
 .price {
-	padding: 0 1rem;
+	padding: 0.4rem 1rem;
 	background-color: lightgray;
 	font-weight: 700;
 	border-radius: 5px;
@@ -88,4 +93,30 @@
 
 .gray {
 	color: darkgray;
+}
+
+@media (max-width: 68em) {
+	.title {
+		width: 35rem;
+	}
+
+	.device {
+		width: 50rem;
+	}
+}
+
+@media (max-width: 62em) {
+	.title {
+		width: 23rem;
+	}
+
+	.device {
+		width: 38rem;
+	}
+}
+
+@media (max-width: 42.5em) {
+	.device {
+		width: 50rem;
+	}
 }
