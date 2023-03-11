@@ -1,11 +1,15 @@
+.description {
+	line-height: 1.6;
+}
+
 .actions {
-  display: flex;
-  justify-content: flex-end;
-  margin: 1vh 0;
+	display: flex;
+	justify-content: flex-end;
+	margin: 1vh 0;
 }
 
 .actions button {
-  margin-left: 10px;
-  padding: 1% 2%;
-  font-weight: 700;
+	margin-left: 1rem;
+	padding: 1.2rem 2.4rem;
+	font-weight: 700;
 }

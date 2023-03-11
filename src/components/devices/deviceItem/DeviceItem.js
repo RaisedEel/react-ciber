@@ -10,6 +10,7 @@ import Confirm from '../../ui/Confirm';
 import device from '../../../assets/device.png';
 import getTimeInMinutes from '../../../helpers/getTimeInMinutes';
 import classes from './DeviceItem.module.css';
+import { panelSummaryActions } from '../../../store/panelSummary-slice';
 
 function DeviceItem(props) {
 	const dispatch = useDispatch();
@@ -17,6 +18,7 @@ function DeviceItem(props) {
 	const { initialTime, rentedHours } = devices.find(
 		(device) => device.name === props.name
 	);
+	const [timeFinished, setTimeFinished] = useState(false);
 
 	// If a initialTime has been set on the store, subtract it from the current time
 	const [rentTime, setRentTime] = useState(
@@ -44,7 +46,16 @@ function DeviceItem(props) {
 		};
 	}, [initialTime]);
 
+	if (!timeFinished) {
+		if (rentedHours > 0 && rentedHours - 0.2 < rentTime / 60) {
+			setTimeFinished(true);
+			dispatch(panelSummaryActions.updateAlerts(props.name));
+		}
+	}
+
 	const startRentHandler = () => {
+		// Add to active devices
+		dispatch(panelSummaryActions.updateActive(1));
 		setRentTime(0);
 		dispatch(
 			panelActions.updateDevice({
@@ -104,6 +115,7 @@ function DeviceItem(props) {
 									onClick={() => {
 										showConfirmAction();
 										setConfirmEnding(true);
+										dispatch(panelSummaryActions.updateActive(-1));
 									}}
 								>
 									Cobrar
@@ -113,6 +125,7 @@ function DeviceItem(props) {
 									onClick={() => {
 										showConfirmAction();
 										setConfirmEnding(false);
+										dispatch(panelSummaryActions.updateActive(-1));
 									}}
 								>
 									Cancelar

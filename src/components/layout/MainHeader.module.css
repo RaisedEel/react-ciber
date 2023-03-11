@@ -1,15 +1,19 @@
 .header {
 	height: 6.4rem;
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-color: #645cbb;
+}
+
+.logo {
+	height: 6rem;
 }
 
 .title {
 	color: #eee;
 	width: 70%;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	font-size: 3.2rem;
 	font-weight: 700;
 	letter-spacing: -0.5px;
@@ -17,6 +21,7 @@
 
 .image {
 	width: 30%;
+	height: 100%;
 	background-image: url(../../assets/head.jpg);
 	background-size: cover;
 	background-position: right;

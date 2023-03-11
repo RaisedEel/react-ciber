@@ -7,22 +7,22 @@ import classes from './Alert.module.css';
 // Component to be used in case of an alert, linked to alert-slice
 // Use only once on your application in the app.js for example
 function Alert() {
-  const dispatch = useDispatch();
-  const { alert } = useSelector((state) => state.alert);
+	const dispatch = useDispatch();
+	const { alert } = useSelector((state) => state.alert);
 
-  return (
-    <Modal
-      title={alert.title}
-      onClose={() => dispatch(alertActions.hideAlert())}
-    >
-      <p>{alert.message}</p>
-      <div className={classes.actions}>
-        <button onClick={() => dispatch(alertActions.hideAlert())}>
-          {alert.okMessage}
-        </button>
-      </div>
-    </Modal>
-  );
+	return (
+		<Modal
+			title={alert.title}
+			onClose={() => dispatch(alertActions.hideAlert())}
+		>
+			<p className={classes.description}>{alert.message}</p>
+			<div className={classes.actions}>
+				<button onClick={() => dispatch(alertActions.hideAlert())}>
+					{alert.okMessage}
+				</button>
+			</div>
+		</Modal>
+	);
 }
 
 export default Alert;
