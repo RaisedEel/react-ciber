@@ -76,23 +76,23 @@
 /* COLORS FOR THE TIMERS */
 
 .red {
-	color: #ba181b;
+	color: #e03131;
 }
 
 .green {
-	color: green;
+	color: #2f9e44;
 }
 
 .yellow {
-	color: orange;
+	color: #fab005;
 }
 
 .blue {
-	color: #187bcd;
+	color: #1971c2;
 }
 
 .gray {
-	color: darkgray;
+	color: #aaa;
 }
 
 @media (max-width: 68em) {
