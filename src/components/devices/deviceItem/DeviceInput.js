@@ -2,6 +2,8 @@ import { useDispatch } from 'react-redux';
 
 import { alertActions } from '../../../store/alert-slice';
 import { panelActions } from '../../../store/panel-slice';
+import { panelSummaryActions } from '../../../store/panelSummary-slice';
+
 import classes from './DeviceInput.module.css';
 
 // Created to separate the logic of the DeviceItem
@@ -17,6 +19,7 @@ function DeviceInput(props) {
 					updatedValues: { rentedHours: rentedHours + 0.5 },
 				})
 			);
+			dispatch(panelSummaryActions.removeAlert(props.name));
 		}
 	};
 
@@ -39,6 +42,9 @@ function DeviceInput(props) {
 				})
 			);
 		}
+
+		if (rentedHours === 0.5)
+			dispatch(panelSummaryActions.removeAlert(props.name));
 	};
 
 	return (

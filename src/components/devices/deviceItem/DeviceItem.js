@@ -1,16 +1,17 @@
 import { Fragment, useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import useModal from '../../../hooks/useModal';
-
 import { panelActions } from '../../../store/panel-slice';
+import { panelSummaryActions } from '../../../store/panelSummary-slice';
+
 import Card from '../../wrappers/Card';
 import DeviceTimer from './DeviceTimer';
 import DeviceInput from './DeviceInput';
 import Confirm from '../../ui/Confirm';
-import device from '../../../assets/device.png';
+
 import getTimeInMinutes from '../../../helpers/getTimeInMinutes';
 import classes from './DeviceItem.module.css';
-import { panelSummaryActions } from '../../../store/panelSummary-slice';
+import device from '../../../assets/device.png';
 
 function DeviceItem(props) {
 	const dispatch = useDispatch();
@@ -18,7 +19,6 @@ function DeviceItem(props) {
 	const { initialTime, rentedHours } = devices.find(
 		(device) => device.name === props.name
 	);
-	const [timeFinished, setTimeFinished] = useState(false);
 
 	// If a initialTime has been set on the store, subtract it from the current time
 	const [rentTime, setRentTime] = useState(
@@ -46,12 +46,11 @@ function DeviceItem(props) {
 		};
 	}, [initialTime]);
 
-	if (!timeFinished) {
-		if (rentedHours > 0 && rentedHours - 0.2 < rentTime / 60) {
-			setTimeFinished(true);
-			dispatch(panelSummaryActions.updateAlerts(props.name));
+	useEffect(() => {
+		if (rentedHours > 0 && rentedHours - 0.01 < rentTime / 60) {
+			dispatch(panelSummaryActions.addAlert(props.name));
 		}
-	}
+	}, [rentedHours, rentTime, dispatch, props.name]);
 
 	const startRentHandler = () => {
 		// Add to active devices
@@ -65,7 +64,7 @@ function DeviceItem(props) {
 		);
 	};
 
-	const confirmActionHandler = () => {
+	const endRentHandler = () => {
 		// Stop the rent
 		dispatch(
 			panelActions.updateDevice({
@@ -73,6 +72,9 @@ function DeviceItem(props) {
 				updatedValues: { initialTime: 0, rentedHours: 0 },
 			})
 		);
+		dispatch(panelSummaryActions.updateActive(-1));
+		dispatch(panelSummaryActions.removeAlert(props.name));
+
 		hideConfirmAction();
 		if (confirmEnding) {
 			// Send the result
@@ -87,7 +89,7 @@ function DeviceItem(props) {
 					title={`${confirmEnding ? 'Ver Resultados' : 'Cancelar Renta'}`}
 					message='Esta acción detendrá la renta. ¿Desea continuar?'
 					onCancel={hideConfirmAction}
-					onConfirm={confirmActionHandler}
+					onConfirm={endRentHandler}
 				/>
 			)}
 			<Card className={classes.device}>
@@ -115,7 +117,6 @@ function DeviceItem(props) {
 									onClick={() => {
 										showConfirmAction();
 										setConfirmEnding(true);
-										dispatch(panelSummaryActions.updateActive(-1));
 									}}
 								>
 									Cobrar
@@ -125,7 +126,6 @@ function DeviceItem(props) {
 									onClick={() => {
 										showConfirmAction();
 										setConfirmEnding(false);
-										dispatch(panelSummaryActions.updateActive(-1));
 									}}
 								>
 									Cancelar
@@ -148,7 +148,7 @@ function DeviceItem(props) {
 										? classes.blue
 										: rentedHours < rentTime / 60
 										? classes.red
-										: rentedHours - 0.2 < rentTime / 60
+										: rentedHours - 0.1 < rentTime / 60
 										? classes.yellow
 										: classes.green
 									: classes.gray

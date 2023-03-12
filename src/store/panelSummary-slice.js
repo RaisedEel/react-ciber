@@ -10,11 +10,14 @@ const panelSummarySlice = createSlice({
 		updateInactive(state, action) {
 			state.inactive = action.payload;
 		},
-		updateAlerts(state, action) {
+		addAlert(state, action) {
 			if (state.alerts.includes(action.payload)) {
 				return;
 			}
 			state.alerts.push(action.payload);
+		},
+		removeAlert(state, action) {
+			state.alerts = state.alerts.filter((alert) => action.payload !== alert);
 		},
 	},
 });
