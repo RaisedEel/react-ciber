@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+// Slice to manage the state of active, inactive and alerts (expired rents) of computers
 const panelSummarySlice = createSlice({
 	name: 'panelSummary',
 	initialState: { active: 0, inactive: 0, alerts: [] },

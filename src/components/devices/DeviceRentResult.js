@@ -29,7 +29,9 @@ function DeviceRentResult(props) {
 				<strong>TOTAL</strong> $ {results.total}
 			</p>
 			<div className={classes.action}>
-				<button onClick={props.onStore}>ACEPTAR</button>
+				<button title='Aceptar' onClick={props.onStore}>
+					ACEPTAR
+				</button>
 			</div>
 		</div>
 	);

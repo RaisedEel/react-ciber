@@ -10,6 +10,7 @@ function DevicesList(props) {
 	const numberOfDevices = useSelector((state) => state.panel.devices.length);
 	const active = useSelector((state) => state.panelSummary.active);
 
+	// Check for unoccupied computers
 	useEffect(() => {
 		dispatch(panelSummaryActions.updateInactive(numberOfDevices - active));
 	}, [dispatch, numberOfDevices, active]);

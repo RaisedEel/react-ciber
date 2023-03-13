@@ -7,10 +7,16 @@ function Confirm(props) {
 		<Modal title={props.title} onClose={props.onCancel}>
 			<p className={classes.description}>{props.message}</p>
 			<div className={classes.actions}>
-				<button onClick={props.onCancel} className='red-button'>
+				<button
+					title='Cancelar'
+					onClick={props.onCancel}
+					className='red-button'
+				>
 					Cancelar
 				</button>
-				<button onClick={props.onConfirm}>Aceptar</button>
+				<button title='Confirmar' onClick={props.onConfirm}>
+					Aceptar
+				</button>
 			</div>
 		</Modal>
 	);

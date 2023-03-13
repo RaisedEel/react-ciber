@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 
+// Hook that uses an reference to a component to perform a callback when
+// the user clicks outside of the referenced component
 function useOutsideAlerter(ref, callback) {
 	useEffect(() => {
 		function outsideAlertHandler(event) {

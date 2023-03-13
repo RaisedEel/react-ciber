@@ -155,10 +155,15 @@ function ComputerForm(props) {
 			/>
 
 			<div className={classes.actions}>
-				<button type='button' className='red-button' onClick={props.onClose}>
+				<button
+					title='Cancelar'
+					type='button'
+					className='red-button'
+					onClick={props.onClose}
+				>
 					Cancelar
 				</button>
-				<button>Subir Datos</button>
+				<button title='Confirmar'>Subir Datos</button>
 			</div>
 		</form>
 	);

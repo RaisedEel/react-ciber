@@ -37,7 +37,11 @@ function RentalItem(props) {
 					<p className={classes.data}>$ {props.price}</p>
 					<p className={classes.result}>$ {props.total}</p>
 					<div className={classes.actions}>
-						<button className='red-button' onClick={showConfirmDelete}>
+						<button
+							title='Eliminar registro'
+							className='red-button'
+							onClick={showConfirmDelete}
+						>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								fill='none'

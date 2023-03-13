@@ -46,6 +46,7 @@ function DeviceItem(props) {
 		};
 	}, [initialTime]);
 
+	// Adds an alert for expired time to the header
 	useEffect(() => {
 		if (rentedHours > 0 && rentedHours - 0.01 < rentTime / 60) {
 			dispatch(panelSummaryActions.addAlert(props.name));
@@ -53,7 +54,7 @@ function DeviceItem(props) {
 	}, [rentedHours, rentTime, dispatch, props.name]);
 
 	const startRentHandler = () => {
-		// Add to active devices
+		// Add to active devices in the header
 		dispatch(panelSummaryActions.updateActive(1));
 		setRentTime(0);
 		dispatch(
@@ -64,8 +65,8 @@ function DeviceItem(props) {
 		);
 	};
 
+	// End the rent
 	const endRentHandler = () => {
-		// Stop the rent
 		dispatch(
 			panelActions.updateDevice({
 				identification: props.name,
@@ -109,11 +110,14 @@ function DeviceItem(props) {
 
 					<div className={classes.actions}>
 						{!initialTime && (
-							<button onClick={startRentHandler}>Comenzar Tiempo</button>
+							<button title='Comenzar tiempo' onClick={startRentHandler}>
+								Comenzar Tiempo
+							</button>
 						)}
 						{!!initialTime && (
 							<Fragment>
 								<button
+									title='Cobrar renta'
 									onClick={() => {
 										showConfirmAction();
 										setConfirmEnding(true);
@@ -122,6 +126,7 @@ function DeviceItem(props) {
 									Cobrar
 								</button>
 								<button
+									title='Cancelar renta'
 									className='red-button'
 									onClick={() => {
 										showConfirmAction();

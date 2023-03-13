@@ -17,7 +17,10 @@ function Alert() {
 		>
 			<p className={classes.description}>{alert.message}</p>
 			<div className={classes.actions}>
-				<button onClick={() => dispatch(alertActions.hideAlert())}>
+				<button
+					title='Aceptar'
+					onClick={() => dispatch(alertActions.hideAlert())}
+				>
 					{alert.okMessage}
 				</button>
 			</div>

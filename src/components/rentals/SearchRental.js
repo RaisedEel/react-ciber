@@ -22,7 +22,7 @@ function SearchRental(props) {
 					type='date'
 					defaultValue={getDate(new Date())}
 				/>
-				<button>Buscar</button>
+				<button title='Buscar rentas en esta fecha'>Buscar</button>
 			</div>
 		</form>
 	);

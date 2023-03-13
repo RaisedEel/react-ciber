@@ -19,6 +19,8 @@ function DeviceInput(props) {
 					updatedValues: { rentedHours: rentedHours + 0.5 },
 				})
 			);
+
+			// Remove alert in case of adding more hours to the rent (Immediately will check if time is still expired)
 			dispatch(panelSummaryActions.removeAlert(props.name));
 		}
 	};
@@ -52,7 +54,7 @@ function DeviceInput(props) {
 			<span className={classes.label}>Horas a Rentar:</span>
 			<span className={classes.value}>{rentedHours}</span>
 			<span className={classes['input-actions']}>
-				<button onClick={addHoursHandler}>
+				<button title='Agregar media hora a la renta' onClick={addHoursHandler}>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						fill='none'
@@ -68,7 +70,10 @@ function DeviceInput(props) {
 						/>
 					</svg>
 				</button>
-				<button onClick={removeHoursHandler}>
+				<button
+					title='Quitar media hora de la renta'
+					onClick={removeHoursHandler}
+				>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						fill='none'

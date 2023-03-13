@@ -2,9 +2,18 @@ import MainContentWrapper from '../components/wrappers/MainContentWrapper';
 import Card from '../components/wrappers/Card';
 import Paragraph from '../components/wrappers/Paragraph';
 
+import img from '../assets/head.jpg';
+
 function MainPage() {
 	return (
 		<MainContentWrapper title='PÁGINA PRINCIPAL'>
+			<div style={{ textAlign: 'center' }}>
+				<img
+					src={img}
+					alt='Diferentes computadoras en fila'
+					style={{ maxWidth: '100%' }}
+				/>
+			</div>
 			<Card style={{ lineHeight: '1.6' }}>
 				<h2
 					className='heading'

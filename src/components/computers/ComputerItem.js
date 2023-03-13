@@ -64,7 +64,10 @@ function ComputerItem(props) {
 						</div>
 					</div>
 					<div className={classes.actions}>
-						<button onClick={props.onUpdate}>
+						<button
+							title='Actualizar datos de la computadora'
+							onClick={props.onUpdate}
+						>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								fill='none'
@@ -80,7 +83,11 @@ function ComputerItem(props) {
 								/>
 							</svg>
 						</button>
-						<button className='red-button' onClick={showConfirmDelete}>
+						<button
+							title='Eliminar datos de la computadora'
+							className='red-button'
+							onClick={showConfirmDelete}
+						>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								fill='none'

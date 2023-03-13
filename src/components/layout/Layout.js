@@ -21,6 +21,7 @@ function Layout(props) {
 			<MainHeader />
 			<div className={classes.container}>
 				<button
+					title={hideMenu ? 'Abrir menú' : 'Cerrar menú'}
 					className={classes['btn-menu']}
 					onMouseDown={(e) => {
 						e.stopPropagation();
