@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-ciber/static/css/main.06018c40.css",
-    "main.js": "/react-ciber/static/js/main.a48ce27b.js",
-    "static/media/device.png": "/react-ciber/static/media/device.1f9fba0d0236dcf74229.png",
-    "static/media/rentas.png": "/react-ciber/static/media/rentas.9a87a369cb8943377f61.png",
-    "static/media/head.jpg": "/react-ciber/static/media/head.273d9be76c9306205f81.jpg",
-    "static/media/panel.png": "/react-ciber/static/media/panel.16224a76db20f245d973.png",
+    "main.css": "/react-ciber/static/css/main.c7132625.css",
+    "main.js": "/react-ciber/static/js/main.8d78787d.js",
+    "static/media/manager-logo.png": "/react-ciber/static/media/manager-logo.eddec696d68d80ea131a.png",
+    "static/media/device.png": "/react-ciber/static/media/device.51d910e336973f0fd83f.png",
+    "static/media/rentas.png": "/react-ciber/static/media/rentas.7a681f499500673eebbe.png",
+    "static/media/head.jpg": "/react-ciber/static/media/head.d7e910da15fc2bb8808a.jpg",
     "index.html": "/react-ciber/index.html",
-    "main.06018c40.css.map": "/react-ciber/static/css/main.06018c40.css.map",
-    "main.a48ce27b.js.map": "/react-ciber/static/js/main.a48ce27b.js.map"
+    "main.c7132625.css.map": "/react-ciber/static/css/main.c7132625.css.map",
+    "main.8d78787d.js.map": "/react-ciber/static/js/main.8d78787d.js.map"
   },
   "entrypoints": [
-    "static/css/main.06018c40.css",
-    "static/js/main.a48ce27b.js"
+    "static/css/main.c7132625.css",
+    "static/js/main.8d78787d.js"
   ]
 }
