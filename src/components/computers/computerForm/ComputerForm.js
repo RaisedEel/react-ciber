@@ -76,7 +76,7 @@ function ComputerForm(props) {
 				label='Identificador: '
 				configuration={{
 					type: 'text',
-					maxLength: '40',
+					maxLength: '60',
 					value: enteredValues.name,
 					onChange: (event) => updateValueHandler('name', event.target.value),
 				}}
@@ -99,7 +99,7 @@ function ComputerForm(props) {
 				label='Marca: '
 				configuration={{
 					type: 'text',
-					maxLength: '20',
+					maxLength: '60',
 					value: enteredValues.brand,
 					onChange: (event) => updateValueHandler('brand', event.target.value),
 				}}
@@ -135,7 +135,7 @@ function ComputerForm(props) {
 				label='Serial de la Computadora: '
 				configuration={{
 					type: 'text',
-					maxLength: '20',
+					maxLength: '60',
 					value: enteredValues.serial,
 					onChange: (event) => updateValueHandler('serial', event.target.value),
 				}}
@@ -145,7 +145,7 @@ function ComputerForm(props) {
 				id='description'
 				label='Descripción General: '
 				configuration={{
-					maxLength: '150',
+					maxLength: '200',
 					rows: '3',
 					value: enteredValues.description,
 					onChange: (event) =>

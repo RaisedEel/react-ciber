@@ -36,3 +36,9 @@
 	width: 2.4rem;
 	height: 2.4rem;
 }
+
+@media (max-width: 48em) {
+	.input-actions button {
+		padding: 0.8rem 0.2rem;
+	}
+}

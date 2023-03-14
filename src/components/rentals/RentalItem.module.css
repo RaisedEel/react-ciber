@@ -50,6 +50,7 @@
 @media (max-width: 42.5em) {
 	.actions button {
 		width: 100%;
+		padding: 0.8rem 0.4rem;
 	}
 }
 
